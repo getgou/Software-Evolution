@@ -1,0 +1,32 @@
+<div *ngIf="data.qrcodes.length == 0" mat-dialog-content>
+  <h1 mat-dialog-title class="text">There is no QR code to scan</h1>
+</div>
+
+<div *ngIf="data.qrcodes.length == 1" mat-dialog-content>
+<h1 mat-dialog-title class="text">Scan the QR code</h1>
+  <span class="text">Open SWEREA's Android app and scan this QR code or enter the {{data.type}}.</span>
+  <h2 class="text">ID: {{data.qrcodes[0]}}</h2>
+  <h2 *ngIf="data.magicIDs != null" class="text">Magics ID: {{data.magicIDs[0]}}</h2>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <qr-code [value]="data.qrcodes[0]" [size]="250"></qr-code>
+  </div>
+</div>
+
+
+<div *ngIf="data.qrcodes.length > 1" mat-dialog-content>
+  <span class="text">Open SWEREA's Android app and scan this QR code or enter the {{data.type}}.</span>
+  <mat-tab-group>
+    <mat-tab *ngFor="let qrcode of data.qrcodes; let i = index" label="{{qrcode}}">
+      <h2 class="text">ID: {{qrcode}}</h2>
+      <h2 *ngIf="data.magicIDs != null" class="text">Magics ID: {{data.magicIDs[i]}}</h2>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <qr-code [value]="qrcode" [size]="250"></qr-code>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onClickClose()" tabindex="0">CLOSE</button>
+</div>

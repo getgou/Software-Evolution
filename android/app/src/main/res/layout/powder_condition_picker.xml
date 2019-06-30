@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:text="Names Goes Here"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:fontFamily="sans-serif-light"
+    android:paddingStart="16dp"
+    android:paddingRight="7dip"
+    android:paddingEnd="7dip"
+    android:ellipsize= "start"
+    android:checkMark="?android:attr/listChoiceIndicatorSingle" />

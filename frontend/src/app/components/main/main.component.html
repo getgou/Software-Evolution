@@ -1,0 +1,45 @@
+<app-toolbar></app-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="end center">
+  <span matTooltip="New build">
+
+
+    <a class="create-btn" mat-fab routerLink="build/new">
+      <img class="logo-image" src="assets/icons8-3d-printer.png" aria-label="New build"/>
+    </a>
+
+    <!--
+    <button mat-raised-button color="primary" (click)="moveToNewBuild()">Sign in</button>
+    -->
+  </span>
+
+  <!--<span matTooltip="New material">-->
+    <!--<a class="create-btn" mat-fab href="/material/new">-->
+      <!--<mat-icon aria-label="New material">assignment</mat-icon>-->
+    <!--</a>-->
+  <!--</span>-->
+
+</div>
+
+<!--<div fxLayout="row" fxLayoutAlign="center center" class="input-container inner mat-elevation-z12">-->
+
+  <!--<mat-form-field>-->
+    <!--<input [(ngModel)]="searchBuildID" matInput placeholder="Enter a build ID"/>-->
+  <!--</mat-form-field>-->
+  <!--<button class="search-btn" mat-raised-button color="primary" (click)="search()">GO!</button>-->
+
+<!--</div>-->
+
+<!--<hr/>-->
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h4>Builds in progress</h4>
+  <app-builds [filterOnMarkedAsDone]="true"></app-builds>
+</div>
+
+<hr/>
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h4>All builds</h4>
+  <app-builds [filterOnMarkedAsDone]="false"></app-builds>
+</div>

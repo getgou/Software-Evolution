@@ -1,0 +1,30 @@
+@import '../../../theme.scss';
+
+.toolbar {
+  background-color: mat-color($swerea-app-primary);
+  height: 80px;
+  padding: 0 16px;
+}
+
+a {
+  background-color: white;
+}
+
+a, a img {
+  display: block;
+  padding: 3px;
+}
+
+span {
+
+  color: white;
+}
+
+span.text {
+  font-size: 1.2em;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}

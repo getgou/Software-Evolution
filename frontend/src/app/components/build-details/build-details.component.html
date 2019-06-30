@@ -1,0 +1,202 @@
+<app-toolbar></app-toolbar>
+<div class="container" *ngIf="build != null" fxLayout="row" fxFill>
+  <div class="sidebar" fxLayout="column" fxLayoutAlign="start stretch" fxFlex="none">
+    <div class="mark-done">
+      <button mat-raised-button (click)="markAsDone()" [disabled]="build.Status == 2">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>done</mat-icon>
+          <span *ngIf="build.Status == 0 || build.Status == 1">MARK AS DONE</span>
+          <!--<span *ngIf="build.Status == 1"></span>-->
+          <span *ngIf="build.Status == 2">ALREADY PRINTED</span>
+        </div>
+      </button>
+    </div>
+    <div class="replicate">
+      <button mat-raised-button (click)="replicate()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>replay</mat-icon>
+          REPLICATE
+        </div>
+      </button>
+    </div>
+    <div class="download">
+      <button mat-raised-button (click)="downloadFiles()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>file_download</mat-icon>
+          DOWNLOAD FILES
+        </div>
+      </button>
+    </div>
+    <div class="build-code">
+      <button mat-raised-button (click)="showBuildId()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon svgIcon="qrcode"></mat-icon>
+          BUILD ID
+        </div>
+      </button>
+    </div>
+    <div class="part-codes">
+      <button mat-raised-button (click)="showPartIds()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon svgIcon="qrcode"></mat-icon>
+          PART IDS
+        </div>
+      </button>
+    </div>
+    <div class="material-code">
+      <button mat-raised-button (click)="showMaterialId()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon svgIcon="qrcode"></mat-icon>
+          MATERIAL ID
+        </div>
+      </button>
+    </div>
+    <div class="delete-build">
+      <button mat-raised-button (click)="deleteBuild()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>delete</mat-icon>
+          DELETE BUILD
+        </div>
+      </button>
+    </div>
+
+    <div class="estimate-cost">
+      <button mat-raised-button (click)="showInputParameters()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>input</mat-icon>
+          Cost parameters
+        </div>
+      </button>
+    </div>
+
+    <div class="estimate-cost">
+      <button mat-raised-button (click)="showCost(build.QR_code)">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>attach_money</mat-icon>
+          Estimate cost
+        </div>
+      </button>
+    </div>
+
+    <div class="download">
+      <button mat-raised-button (click)="jsontopdf()">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon>report</mat-icon>
+          PARAMETERS USED  
+        </div>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="main-content" fxFlex>
+    <div class="magics-img" fxLayout="row" fxLayoutAlign="center center" mat-elevation-z12>
+      <img *ngIf="imgString" [src]="domSanitizer.bypassSecurityTrustUrl(imgString)" alt="Screenshot of the magics file" />
+    </div>
+    <div class="ball-row build-id-row" fxLayout="row" fxLayoutAlign="center start">
+      <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+        <div class="ball buildId" fxLayout="column" fxLayoutAlign="center center">{{build.QR_code}}</div>
+        <span>Build ID</span>
+      </div>
+    </div>
+    <div *ngIf="printingData == null" fxLayout="row" fxLayoutAlign="center center">
+      <mat-spinner></mat-spinner>
+    </div>
+    <ng-container *ngIf="printingData != null">
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.printingDate |
+            date:'yyyy-MM-dd'}}</div>
+          <span>Printing date</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.startTime |
+            date:'HH:mm'}}</div>
+          <span>Start time</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.endTime}}</div>
+          <!--| date:'HH:mm'}}</div>-->
+          <span>End time</span>
+        </div>
+      </div>
+
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.operator}}</div>
+          <span>Operator</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.typeOfmachine}}</div>
+          <span>Type of machine</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderWeightStart}}</div>
+          <span>Powder weight start</span>
+        </div>
+      </div>
+
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderweightEnd}}</div>
+          <span>Powder weight end</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.weightPowderWaste}}</div>
+          <span>Weight powder waste</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.powerUsed}}</div>
+          <span>Power used</span>
+        </div>
+      </div>
+
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.platformMaterial}}</div>
+          <span>Platform material</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.platformWeight}}</div>
+          <span>Platform weight</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.printedTime}}</div>
+          <!--| date:'HH:mm'}}</div>-->
+          <span>Printed time</span>
+        </div>
+      </div>
+
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderCondition}}</div>
+          <span>Powder condition</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.numberLayers}}</div>
+          <span>Number of layers</span>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.dpcFactor}}</div>
+          <span>DPC factor</span>
+        </div>
+      </div>
+
+      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.minExposureTime}}</div>
+          <!--| date:'HH:mm'}}</div>-->
+          <span>Min exposure time</span>
+        </div>
+        <div class="ball-container comments" fxLayout="column" fxLayoutAlign="center center">
+          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.comments}}</div>
+          <p>Comments</p>
+        </div>
+        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">
+          <!--<div class="ball end-time" fxLayout="column" fxLayoutAlign="center center"></div>-->
+          <!--<span></span>-->
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

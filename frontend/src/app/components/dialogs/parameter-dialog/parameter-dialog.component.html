@@ -1,0 +1,87 @@
+<div mat-dialog-content class="choice-dialog">
+  <form [formGroup]="constParamsForm">
+    <p>Cost parameters (Unit is SEK)</p>
+    <hr />
+    <div>
+      <mat-label>Printer cost per hour</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="printer cost per hour" [value]="printerCost" formControlName="printerCost">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Material cost per kg</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Material cost per hour" [value]="materialCost" formControlName="materialCost">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Labour cost per hour</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Labour cost per hour" [value]="labourCost" formControlName="labourCost">
+      </mat-form-field>
+    </div>
+    <!--<mat-error *ngIf="loginError">Hej</mat-error>-->
+    <p>Time parameters (Unit is hour)</p>
+    <hr />
+    <div>
+      <mat-label>Pre-processing per part</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="preprocessing time" [value]="preProcessing" formControlName="preProcessing">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Build job setup </mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Setup time" [value]="setupTime" formControlName="setupTime">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Powder handling</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Powder handling time" [value]="powderHandling" formControlName="powderHandling">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Build job start</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Start time" [value]="startTime" formControlName="startTime">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-label>Build removal from printer</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Build removal time" [value]="buildRemovalTime" formControlName="buildRemovalTime">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-label>Part removal from build platform</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Part removal time" [value]="partRemovalTime" formControlName="partRemovalTime">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-label>Machine cleaning</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Machine cleaning time" [value]="machineCleaningTime" formControlName="machineCleaningTime">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-label>Post-processing per cm3</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="Post-processing time" [value]="postProcessingTime" formControlName="postProcessingTime">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onClickClose()" tabindex="0">Close</button>
+      <button mat-button class="primary" color="primary" (click)="updateParameters()" tabindex="1">Save</button>
+    </div>
+
+  </form>
+</div>

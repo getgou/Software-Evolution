@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textviewDownloadProgressSTL"
+        android:textSize="60sp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/downloadSTLProgressBar"
+        android:layout_below="@+id/textviewDownloadProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_margin="10dp"
+        android:progress="0"
+        android:max="100" />
+
+</LinearLayout>

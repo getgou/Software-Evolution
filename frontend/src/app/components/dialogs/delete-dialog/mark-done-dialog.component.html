@@ -1,0 +1,8 @@
+<h1 mat-dialog-title class="text">Mark as done</h1>
+<div mat-dialog-content class="choice-dialog">
+    <span class="text">Have you printed this build {{data.obj.QR_code}} and want to mark it as done?</span>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClickClose()" tabindex="0">DISMISS</button>
+  <button mat-button color="primary" (click)="onClickMarkDone()" tabindex="1">CONFIRM</button>
+</div>

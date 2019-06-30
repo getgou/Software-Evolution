@@ -1,0 +1,8 @@
+<h1 mat-dialog-title class="text">Warning!</h1>
+<div mat-dialog-content class="choice-dialog">
+    <span class="text">Are you sure you want to delete build with build id: {{data.obj.QR_code}}?</span>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClickClose()" tabindex="0">DISMISS</button>
+  <button mat-button color="warn" (click)="onClickDelete()" tabindex="1">DELETE</button>
+</div>

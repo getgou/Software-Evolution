@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SEPDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SEPDBModelStoreContainer">
+    <EntitySet Name="C__MigrationHistory" EntityType="SEPDBModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetRoles" EntityType="SEPDBModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserClaims" EntityType="SEPDBModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserLogins" EntityType="SEPDBModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsers" EntityType="SEPDBModel.Store.AspNetUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Build" EntityType="SEPDBModel.Store.Build" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GeneralTest" EntityType="SEPDBModel.Store.GeneralTest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GomBuild" EntityType="SEPDBModel.Store.GomBuild" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GomPart" EntityType="SEPDBModel.Store.GomPart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Magic" EntityType="SEPDBModel.Store.Magic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Material" EntityType="SEPDBModel.Store.Material" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaterialPdf" EntityType="SEPDBModel.Store.MaterialPdf" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Part" EntityType="SEPDBModel.Store.Part" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PartTest" EntityType="SEPDBModel.Store.PartTest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PartTestDetails" EntityType="SEPDBModel.Store.PartTestDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrintingInfo" EntityType="SEPDBModel.Store.PrintingInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SLM" EntityType="SEPDBModel.Store.SLM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StressRelieveingTest" EntityType="SEPDBModel.Store.StressRelieveingTest" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="SEPDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="SEPDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VariableParameters" EntityType="SEPDBModel.Store.VariableParameters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstimatedValues" EntityType="SEPDBModel.Store.EstimatedValues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConstantParameters" EntityType="SEPDBModel.Store.ConstantParameters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserRoles" EntityType="SEPDBModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="SEPDBModel.Store.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="SEPDBModel.Store.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gom_Build_Build" Association="SEPDBModel.Store.FK_Gom_Build_Build">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="GomBuild" EntitySet="GomBuild" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Magic_Magic" Association="SEPDBModel.Store.FK_Magic_Magic">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="Magic" EntitySet="Magic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Part_Build" Association="SEPDBModel.Store.FK_Part_Build">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="Part" EntitySet="Part" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrintingInfo_Build" Association="SEPDBModel.Store.FK_PrintingInfo_Build">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="PrintingInfo" EntitySet="PrintingInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SLM_SLM" Association="SEPDBModel.Store.FK_SLM_SLM">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="SLM" EntitySet="SLM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gom_part_Part" Association="SEPDBModel.Store.FK_Gom_part_Part">
+      <End Role="Part" EntitySet="Part" />
+      <End Role="GomPart" EntitySet="GomPart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Material_Pdf_Material" Association="SEPDBModel.Store.FK_Material_Pdf_Material">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="MaterialPdf" EntitySet="MaterialPdf" />
+    </AssociationSet>
+    <AssociationSet Name="FK_part_test_details_Part" Association="SEPDBModel.Store.FK_part_test_details_Part">
+      <End Role="Part" EntitySet="Part" />
+      <End Role="PartTestDetails" EntitySet="PartTestDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_part_test_details_part_test_details" Association="SEPDBModel.Store.FK_part_test_details_part_test_details">
+      <End Role="PartTest" EntitySet="PartTest" />
+      <End Role="PartTestDetails" EntitySet="PartTestDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StressRelieveingTest_PartTest" Association="SEPDBModel.Store.FK_StressRelieveingTest_PartTest">
+      <End Role="PartTest" EntitySet="PartTest" />
+      <End Role="StressRelieveingTest" EntitySet="StressRelieveingTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="SEPDBModel.Store.FK_AspNetUserRoles_AspNetRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="SEPDBModel.Store.FK_AspNetUserRoles_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="BuildEstimatedValues" Association="SEPDBModel.Store.BuildEstimatedValues">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="EstimatedValues" EntitySet="EstimatedValues" />
+    </AssociationSet>
+    <AssociationSet Name="BuildVariableParameters" Association="SEPDBModel.Store.BuildVariableParameters">
+      <End Role="Build" EntitySet="Build" />
+      <End Role="VariableParameters" EntitySet="VariableParameters" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Firstname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Lastname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Build">
+    <Key>
+      <PropertyRef Name="BuildID" />
+    </Key>
+    <Property Name="BuildID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QR_code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="MaterialId" Type="int" Nullable="true" />
+    <Property Name="Status" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GeneralTest">
+    <Key>
+      <PropertyRef Name="GeneralID" />
+    </Key>
+    <Property Name="SupportRemoval" Type="bit" Nullable="true" />
+    <Property Name="WEDM" Type="bit" Nullable="true" />
+    <Property Name="WEDMComments" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Blasting" Type="bit" Nullable="true" />
+    <Property Name="BlastingComments" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="GeneralID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QRCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PartId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="GomBuild">
+    <Key>
+      <PropertyRef Name="GomBuildID" />
+    </Key>
+    <Property Name="GomBuildID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GomPart">
+    <Key>
+      <PropertyRef Name="GomPartID" />
+    </Key>
+    <Property Name="GomPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PartId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Magic">
+    <Key>
+      <PropertyRef Name="MagicID" />
+    </Key>
+    <Property Name="MagicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MagicScreenshot" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QR_code" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MaterialPdf">
+    <Key>
+      <PropertyRef Name="MaterialPdfID" />
+    </Key>
+    <Property Name="MaterialPdfID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MaterialId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Part">
+    <Key>
+      <PropertyRef Name="PartID" />
+    </Key>
+    <Property Name="PartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StlFileName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="PrtFileName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="QR_code" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+    <Property Name="MagicID" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PartTest">
+    <Key>
+      <PropertyRef Name="PartTestID" />
+    </Key>
+    <Property Name="PartTestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Temperature" Type="float" Nullable="true" />
+    <Property Name="TimeEvent" Type="datetime" Nullable="true" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartTestDetails">
+    <Key>
+      <PropertyRef Name="PartTestDetailsID" />
+    </Key>
+    <Property Name="PartTestDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartId" Type="int" Nullable="true" />
+    <Property Name="PartTestId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="PrintingInfo">
+    <Key>
+      <PropertyRef Name="PrintingInfoID" />
+    </Key>
+    <Property Name="PrintingInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuildStatus" Type="nvarchar" Nullable="true" MaxLength="150" />
+    <Property Name="StartTime" Type="datetime" Nullable="true" />
+    <Property Name="EndTime" Type="datetime" Nullable="true" />
+    <Property Name="PrintingDate" Type="datetime" Nullable="true" />
+    <Property Name="Operator" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="TypeOfmachine" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="PowderWeightStart" Type="float" Nullable="true" />
+    <Property Name="PowderweightEnd" Type="float" Nullable="true" />
+    <Property Name="WeightPowderWaste" Type="float" Nullable="true" />
+    <Property Name="PowerUsed" Type="float" Nullable="true" />
+    <Property Name="PlatformMaterial" Type="nvarchar" Nullable="true" MaxLength="250" />
+    <Property Name="PlatformWeight" Type="float" Nullable="true" />
+    <Property Name="PrintedTime" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="PowderCondition" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="NumberLayers" Type="int" Nullable="true" />
+    <Property Name="DPCFactor" Type="float" Nullable="true" />
+    <Property Name="MinExposureTime" Type="nvarchar" Nullable="true" MaxLength="30" />
+    <Property Name="Comments" Type="nchar" Nullable="true" MaxLength="500" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SLM">
+    <Key>
+      <PropertyRef Name="SLMID" />
+    </Key>
+    <Property Name="SLMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StressRelieveingTest">
+    <Key>
+      <PropertyRef Name="StressRelieveingTestID" />
+    </Key>
+    <Property Name="StressRelieveingTestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShieldingGas" Type="bit" Nullable="false" />
+    <Property Name="PartTestId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Lastname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="VariableParameters">
+    <Key>
+      <PropertyRef Name="ParamID" />
+    </Key>
+    <Property Name="ParamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Volume" Type="float" Nullable="false" />
+    <Property Name="Weight" Type="float" Nullable="false" />
+    <Property Name="ZHeight" Type="float" Nullable="false" />
+    <Property Name="NumberOfLayers" Type="int" Nullable="false" />
+    <Property Name="UnitOfLength" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InfillPercentage" Type="float" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstimatedValues">
+    <Key>
+      <PropertyRef Name="ValueID" />
+    </Key>
+    <Property Name="ValueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalPowderUsed" Type="float" Nullable="false" />
+    <Property Name="TotalPrintingTime" Type="float" Nullable="false" />
+    <Property Name="TotalCost" Type="float" Nullable="false" />
+    <Property Name="BuildId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConstantParameters">
+    <Key>
+      <PropertyRef Name="ConstID" />
+    </Key>
+    <Property Name="ConstID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrinterCost" Type="float" Nullable="false" />
+    <Property Name="MaterialCost" Type="float" Nullable="false" />
+    <Property Name="LabourCost" Type="float" Nullable="false" />
+    <Property Name="PreProcessingTime" Type="float" Nullable="false" />
+    <Property Name="SetupTime" Type="float" Nullable="false" />
+    <Property Name="PowderHandlingTime" Type="float" Nullable="false" />
+    <Property Name="JobStartTime" Type="float" Nullable="false" />
+    <Property Name="BuildRemovalTime" Type="float" Nullable="false" />
+    <Property Name="PartRemovalTime" Type="float" Nullable="false" />
+    <Property Name="PostProcessingTime" Type="float" Nullable="false" />
+    <Property Name="MachineCleaningTime" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="SEPDBModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="SEPDBModel.Store.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="SEPDBModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="SEPDBModel.Store.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gom_Build_Build">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="GomBuild" Type="SEPDBModel.Store.GomBuild" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="GomBuild">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Magic_Magic">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="Magic" Type="SEPDBModel.Store.Magic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="Magic">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Part_Build">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="Part" Type="SEPDBModel.Store.Part" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="Part">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrintingInfo_Build">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="PrintingInfo" Type="SEPDBModel.Store.PrintingInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="PrintingInfo">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SLM_SLM">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="SLM" Type="SEPDBModel.Store.SLM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="SLM">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gom_part_Part">
+    <End Role="Part" Type="SEPDBModel.Store.Part" Multiplicity="1" />
+    <End Role="GomPart" Type="SEPDBModel.Store.GomPart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Part">
+        <PropertyRef Name="PartID" />
+      </Principal>
+      <Dependent Role="GomPart">
+        <PropertyRef Name="PartId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Material_Pdf_Material">
+    <End Role="Material" Type="SEPDBModel.Store.Material" Multiplicity="0..1" />
+    <End Role="MaterialPdf" Type="SEPDBModel.Store.MaterialPdf" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="MaterialPdf">
+        <PropertyRef Name="MaterialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_part_test_details_Part">
+    <End Role="Part" Type="SEPDBModel.Store.Part" Multiplicity="0..1" />
+    <End Role="PartTestDetails" Type="SEPDBModel.Store.PartTestDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Part">
+        <PropertyRef Name="PartID" />
+      </Principal>
+      <Dependent Role="PartTestDetails">
+        <PropertyRef Name="PartId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_part_test_details_part_test_details">
+    <End Role="PartTest" Type="SEPDBModel.Store.PartTest" Multiplicity="0..1" />
+    <End Role="PartTestDetails" Type="SEPDBModel.Store.PartTestDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartTest">
+        <PropertyRef Name="PartTestID" />
+      </Principal>
+      <Dependent Role="PartTestDetails">
+        <PropertyRef Name="PartTestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StressRelieveingTest_PartTest">
+    <End Role="PartTest" Type="SEPDBModel.Store.PartTest" Multiplicity="1" />
+    <End Role="StressRelieveingTest" Type="SEPDBModel.Store.StressRelieveingTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartTest">
+        <PropertyRef Name="PartTestID" />
+      </Principal>
+      <Dependent Role="StressRelieveingTest">
+        <PropertyRef Name="PartTestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BuildEstimatedValues">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="EstimatedValues" Type="SEPDBModel.Store.EstimatedValues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="EstimatedValues">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BuildVariableParameters">
+    <End Role="Build" Type="SEPDBModel.Store.Build" Multiplicity="1" />
+    <End Role="VariableParameters" Type="SEPDBModel.Store.VariableParameters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Build">
+        <PropertyRef Name="BuildID" />
+      </Principal>
+      <Dependent Role="VariableParameters">
+        <PropertyRef Name="BuildId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRoles">
+    <End Role="AspNetRoles" Type="SEPDBModel.Store.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="SEPDBModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUsers">
+    <End Role="AspNetUserRoles" Type="SEPDBModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="SEPDBModel.Store.AspNetUsers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SEPDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="Build">
+          <Key>
+            <PropertyRef Name="BuildID" />
+          </Key>
+          <Property Name="BuildID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QR_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialId" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="GomBuild" Relationship="Self.FK_Gom_Build_Build" FromRole="Build" ToRole="GomBuild" />
+          <NavigationProperty Name="Magic" Relationship="Self.FK_Magic_Magic" FromRole="Build" ToRole="Magic" />
+          <NavigationProperty Name="Part" Relationship="Self.FK_Part_Build" FromRole="Build" ToRole="Part" />
+          <NavigationProperty Name="PrintingInfo" Relationship="Self.FK_PrintingInfo_Build" FromRole="Build" ToRole="PrintingInfo" />
+          <NavigationProperty Name="SLM" Relationship="Self.FK_SLM_SLM" FromRole="Build" ToRole="SLM" />
+          <NavigationProperty Name="EstimatedValues" Relationship="SEPDBModel.BuildEstimatedValues" FromRole="Build" ToRole="EstimatedValues" />
+          <NavigationProperty Name="VariableParameters" Relationship="SEPDBModel.BuildVariableParameters" FromRole="Build" ToRole="VariableParameters" />
+        </EntityType>
+        <EntityType Name="GeneralTest">
+          <Key>
+            <PropertyRef Name="GeneralID" />
+          </Key>
+          <Property Name="SupportRemoval" Type="Boolean" />
+          <Property Name="WEDM" Type="Boolean" />
+          <Property Name="WEDMComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Blasting" Type="Boolean" />
+          <Property Name="BlastingComments" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GeneralID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QRCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="GomBuild">
+          <Key>
+            <PropertyRef Name="GomBuildID" />
+          </Key>
+          <Property Name="GomBuildID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_Gom_Build_Build" FromRole="GomBuild" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="GomPart">
+          <Key>
+            <PropertyRef Name="GomPartID" />
+          </Key>
+          <Property Name="GomPartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PartId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Part" Relationship="Self.FK_Gom_part_Part" FromRole="GomPart" ToRole="Part" />
+        </EntityType>
+        <EntityType Name="Magic">
+          <Key>
+            <PropertyRef Name="MagicID" />
+          </Key>
+          <Property Name="MagicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MagicScreenshot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_Magic_Magic" FromRole="Magic" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="Material">
+          <Key>
+            <PropertyRef Name="MaterialID" />
+          </Key>
+          <Property Name="MaterialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QR_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MaterialPdf" Relationship="Self.FK_Material_Pdf_Material" FromRole="Material" ToRole="MaterialPdf" />
+        </EntityType>
+        <EntityType Name="MaterialPdf">
+          <Key>
+            <PropertyRef Name="MaterialPdfID" />
+          </Key>
+          <Property Name="MaterialPdfID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaterialId" Type="Int32" />
+          <NavigationProperty Name="Material" Relationship="Self.FK_Material_Pdf_Material" FromRole="MaterialPdf" ToRole="Material" />
+        </EntityType>
+        <EntityType Name="Part">
+          <Key>
+            <PropertyRef Name="PartID" />
+          </Key>
+          <Property Name="PartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StlFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrtFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QR_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <Property Name="MagicID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_Part_Build" FromRole="Part" ToRole="Build" />
+          <NavigationProperty Name="GomPart" Relationship="Self.FK_Gom_part_Part" FromRole="Part" ToRole="GomPart" />
+          <NavigationProperty Name="PartTestDetails" Relationship="Self.FK_part_test_details_Part" FromRole="Part" ToRole="PartTestDetails" />
+        </EntityType>
+        <EntityType Name="PartTest">
+          <Key>
+            <PropertyRef Name="PartTestID" />
+          </Key>
+          <Property Name="PartTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Temperature" Type="Double" />
+          <Property Name="TimeEvent" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PartTestDetails" Relationship="Self.FK_part_test_details_part_test_details" FromRole="PartTest" ToRole="PartTestDetails" />
+          <NavigationProperty Name="StressRelieveingTest" Relationship="Self.FK_StressRelieveingTest_PartTest" FromRole="PartTest" ToRole="StressRelieveingTest" />
+        </EntityType>
+        <EntityType Name="PartTestDetails">
+          <Key>
+            <PropertyRef Name="PartTestDetailsID" />
+          </Key>
+          <Property Name="PartTestDetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PartId" Type="Int32" />
+          <Property Name="PartTestId" Type="Int32" />
+          <NavigationProperty Name="Part" Relationship="Self.FK_part_test_details_Part" FromRole="PartTestDetails" ToRole="Part" />
+          <NavigationProperty Name="PartTest" Relationship="Self.FK_part_test_details_part_test_details" FromRole="PartTestDetails" ToRole="PartTest" />
+        </EntityType>
+        <EntityType Name="PrintingInfo">
+          <Key>
+            <PropertyRef Name="PrintingInfoID" />
+          </Key>
+          <Property Name="PrintingInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuildStatus" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="PrintingDate" Type="DateTime" Precision="0" />
+          <Property Name="Operator" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfmachine" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PowderWeightStart" Type="Double" />
+          <Property Name="PowderweightEnd" Type="Double" />
+          <Property Name="WeightPowderWaste" Type="Double" />
+          <Property Name="PowerUsed" Type="Double" />
+          <Property Name="PlatformMaterial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PlatformWeight" Type="Double" />
+          <Property Name="PrintedTime" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PowderCondition" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NumberLayers" Type="Int32" />
+          <Property Name="DPCFactor" Type="Double" />
+          <Property Name="MinExposureTime" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_PrintingInfo_Build" FromRole="PrintingInfo" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="SLM">
+          <Key>
+            <PropertyRef Name="SLMID" />
+          </Key>
+          <Property Name="SLMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="Self.FK_SLM_SLM" FromRole="SLM" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="StressRelieveingTest">
+          <Key>
+            <PropertyRef Name="StressRelieveingTestID" />
+          </Key>
+          <Property Name="StressRelieveingTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShieldingGas" Type="Boolean" Nullable="false" />
+          <Property Name="PartTestId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PartTest" Relationship="Self.FK_StressRelieveingTest_PartTest" FromRole="StressRelieveingTest" ToRole="PartTest" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gom_Build_Build">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="GomBuild" Type="Self.GomBuild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="GomBuild">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Magic_Magic">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="Magic" Type="Self.Magic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="Magic">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Part_Build">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="Part" Type="Self.Part" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="Part">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrintingInfo_Build">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="PrintingInfo" Type="Self.PrintingInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="PrintingInfo">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SLM_SLM">
+          <End Role="Build" Type="Self.Build" Multiplicity="1" />
+          <End Role="SLM" Type="Self.SLM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="SLM">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gom_part_Part">
+          <End Role="Part" Type="Self.Part" Multiplicity="1" />
+          <End Role="GomPart" Type="Self.GomPart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Part">
+              <PropertyRef Name="PartID" />
+            </Principal>
+            <Dependent Role="GomPart">
+              <PropertyRef Name="PartId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Material_Pdf_Material">
+          <End Role="Material" Type="Self.Material" Multiplicity="0..1" />
+          <End Role="MaterialPdf" Type="Self.MaterialPdf" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Material">
+              <PropertyRef Name="MaterialID" />
+            </Principal>
+            <Dependent Role="MaterialPdf">
+              <PropertyRef Name="MaterialId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_part_test_details_Part">
+          <End Role="Part" Type="Self.Part" Multiplicity="0..1" />
+          <End Role="PartTestDetails" Type="Self.PartTestDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Part">
+              <PropertyRef Name="PartID" />
+            </Principal>
+            <Dependent Role="PartTestDetails">
+              <PropertyRef Name="PartId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_part_test_details_part_test_details">
+          <End Role="PartTest" Type="Self.PartTest" Multiplicity="0..1" />
+          <End Role="PartTestDetails" Type="Self.PartTestDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PartTest">
+              <PropertyRef Name="PartTestID" />
+            </Principal>
+            <Dependent Role="PartTestDetails">
+              <PropertyRef Name="PartTestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StressRelieveingTest_PartTest">
+          <End Role="PartTest" Type="Self.PartTest" Multiplicity="1" />
+          <End Role="StressRelieveingTest" Type="Self.StressRelieveingTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PartTest">
+              <PropertyRef Name="PartTestID" />
+            </Principal>
+            <Dependent Role="StressRelieveingTest">
+              <PropertyRef Name="PartTestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="SEPDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="Build" EntityType="Self.Build" />
+          <EntitySet Name="GeneralTest" EntityType="Self.GeneralTest" />
+          <EntitySet Name="GomBuild" EntityType="Self.GomBuild" />
+          <EntitySet Name="GomPart" EntityType="Self.GomPart" />
+          <EntitySet Name="Magic" EntityType="Self.Magic" />
+          <EntitySet Name="Material" EntityType="Self.Material" />
+          <EntitySet Name="MaterialPdf" EntityType="Self.MaterialPdf" />
+          <EntitySet Name="Part" EntityType="Self.Part" />
+          <EntitySet Name="PartTest" EntityType="Self.PartTest" />
+          <EntitySet Name="PartTestDetails" EntityType="Self.PartTestDetails" />
+          <EntitySet Name="PrintingInfo" EntityType="Self.PrintingInfo" />
+          <EntitySet Name="SLM" EntityType="Self.SLM" />
+          <EntitySet Name="StressRelieveingTest" EntityType="Self.StressRelieveingTest" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gom_Build_Build" Association="Self.FK_Gom_Build_Build">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="GomBuild" EntitySet="GomBuild" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Magic_Magic" Association="Self.FK_Magic_Magic">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="Magic" EntitySet="Magic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Part_Build" Association="Self.FK_Part_Build">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="Part" EntitySet="Part" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrintingInfo_Build" Association="Self.FK_PrintingInfo_Build">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="PrintingInfo" EntitySet="PrintingInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SLM_SLM" Association="Self.FK_SLM_SLM">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="SLM" EntitySet="SLM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gom_part_Part" Association="Self.FK_Gom_part_Part">
+            <End Role="Part" EntitySet="Part" />
+            <End Role="GomPart" EntitySet="GomPart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Material_Pdf_Material" Association="Self.FK_Material_Pdf_Material">
+            <End Role="Material" EntitySet="Material" />
+            <End Role="MaterialPdf" EntitySet="MaterialPdf" />
+          </AssociationSet>
+          <AssociationSet Name="FK_part_test_details_Part" Association="Self.FK_part_test_details_Part">
+            <End Role="Part" EntitySet="Part" />
+            <End Role="PartTestDetails" EntitySet="PartTestDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_part_test_details_part_test_details" Association="Self.FK_part_test_details_part_test_details">
+            <End Role="PartTest" EntitySet="PartTest" />
+            <End Role="PartTestDetails" EntitySet="PartTestDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StressRelieveingTest_PartTest" Association="Self.FK_StressRelieveingTest_PartTest">
+            <End Role="PartTest" EntitySet="PartTest" />
+            <End Role="StressRelieveingTest" EntitySet="StressRelieveingTest" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="VariableParameters" EntityType="SEPDBModel.VariableParameters" />
+          <EntitySet Name="EstimatedValues" EntityType="SEPDBModel.EstimatedValues" />
+          <EntitySet Name="ConstantParameters" EntityType="SEPDBModel.ConstantParameters" />
+          <AssociationSet Name="BuildEstimatedValues" Association="SEPDBModel.BuildEstimatedValues">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="EstimatedValues" EntitySet="EstimatedValues" />
+          </AssociationSet>
+          <AssociationSet Name="BuildVariableParameters" Association="SEPDBModel.BuildVariableParameters">
+            <End Role="Build" EntitySet="Build" />
+            <End Role="VariableParameters" EntitySet="VariableParameters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="VariableParameters">
+          <Key>
+            <PropertyRef Name="ParamID" />
+          </Key>
+          <Property Name="ParamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialType" Type="String" Nullable="false" />
+          <Property Name="Volume" Type="Double" Nullable="false" />
+          <Property Name="Weight" Type="Double" Nullable="false" />
+          <Property Name="ZHeight" Type="Double" Nullable="false" />
+          <Property Name="NumberOfLayers" Type="Int32" Nullable="false" />
+          <Property Name="UnitOfLength" Type="String" Nullable="false" />
+          <Property Name="InfillPercentage" Type="Double" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="SEPDBModel.BuildVariableParameters" FromRole="VariableParameters" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="EstimatedValues">
+          <Key>
+            <PropertyRef Name="ValueID" />
+          </Key>
+          <Property Name="ValueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalPowderUsed" Type="Double" Nullable="false" />
+          <Property Name="TotalPrintingTime" Type="Double" Nullable="false" />
+          <Property Name="TotalCost" Type="Double" Nullable="false" />
+          <Property Name="BuildId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Build" Relationship="SEPDBModel.BuildEstimatedValues" FromRole="EstimatedValues" ToRole="Build" />
+        </EntityType>
+        <EntityType Name="ConstantParameters">
+          <Key>
+            <PropertyRef Name="ConstID" />
+          </Key>
+          <Property Name="ConstID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrinterCost" Type="Double" Nullable="false" />
+          <Property Name="MaterialCost" Type="Double" Nullable="false" />
+          <Property Name="LabourCost" Type="Double" Nullable="false" />
+          <Property Name="PreProcessingTime" Type="Double" Nullable="false" />
+          <Property Name="SetupTime" Type="Double" Nullable="false" />
+          <Property Name="PowderHandlingTime" Type="Double" Nullable="false" />
+          <Property Name="JobStartTime" Type="Double" Nullable="false" />
+          <Property Name="BuildRemovalTime" Type="Double" Nullable="false" />
+          <Property Name="PartRemovalTime" Type="Double" Nullable="false" />
+          <Property Name="PostProcessingTime" Type="Double" Nullable="false" />
+          <Property Name="MachineCleaningTime" Type="Double" Nullable="false" />
+        </EntityType>
+        <Association Name="BuildEstimatedValues">
+          <End Type="SEPDBModel.Build" Role="Build" Multiplicity="1" />
+          <End Type="SEPDBModel.EstimatedValues" Role="EstimatedValues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="EstimatedValues">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BuildVariableParameters">
+          <End Type="SEPDBModel.Build" Role="Build" Multiplicity="1" />
+          <End Type="SEPDBModel.VariableParameters" Role="VariableParameters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Build">
+              <PropertyRef Name="BuildID" />
+            </Principal>
+            <Dependent Role="VariableParameters">
+              <PropertyRef Name="BuildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SEPDBModelStoreContainer" CdmEntityContainer="SEPDBEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.AspNetRoles)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.AspNetUserClaims)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.AspNetUserLogins)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.AspNetUsers)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Build">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.Build)">
+        <MappingFragment StoreEntitySet="Build">
+          <ScalarProperty Name="BuildID" ColumnName="BuildID" />
+          <ScalarProperty Name="QR_code" ColumnName="QR_code" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralTest">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.GeneralTest)">
+        <MappingFragment StoreEntitySet="GeneralTest">
+          <ScalarProperty Name="GeneralID" ColumnName="GeneralID" />
+          <ScalarProperty Name="SupportRemoval" ColumnName="SupportRemoval" />
+          <ScalarProperty Name="WEDM" ColumnName="WEDM" />
+          <ScalarProperty Name="WEDMComments" ColumnName="WEDMComments" />
+          <ScalarProperty Name="Blasting" ColumnName="Blasting" />
+          <ScalarProperty Name="BlastingComments" ColumnName="BlastingComments" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="PartId" ColumnName="PartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GomBuild">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.GomBuild)">
+        <MappingFragment StoreEntitySet="GomBuild">
+          <ScalarProperty Name="GomBuildID" ColumnName="GomBuildID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GomPart">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.GomPart)">
+        <MappingFragment StoreEntitySet="GomPart">
+          <ScalarProperty Name="GomPartID" ColumnName="GomPartID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="PartId" ColumnName="PartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Magic">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.Magic)">
+        <MappingFragment StoreEntitySet="Magic">
+          <ScalarProperty Name="MagicID" ColumnName="MagicID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="MagicScreenshot" ColumnName="MagicScreenshot" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.Material)">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="QR_code" ColumnName="QR_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialPdf">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.MaterialPdf)">
+        <MappingFragment StoreEntitySet="MaterialPdf">
+          <ScalarProperty Name="MaterialPdfID" ColumnName="MaterialPdfID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Part">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.Part)">
+        <MappingFragment StoreEntitySet="Part">
+          <ScalarProperty Name="PartID" ColumnName="PartID" />
+          <ScalarProperty Name="StlFileName" ColumnName="StlFileName" />
+          <ScalarProperty Name="PrtFileName" ColumnName="PrtFileName" />
+          <ScalarProperty Name="QR_code" ColumnName="QR_code" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+          <ScalarProperty Name="MagicID" ColumnName="MagicID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartTest">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.PartTest)">
+        <MappingFragment StoreEntitySet="PartTest">
+          <ScalarProperty Name="PartTestID" ColumnName="PartTestID" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="TimeEvent" ColumnName="TimeEvent" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartTestDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.PartTestDetails)">
+        <MappingFragment StoreEntitySet="PartTestDetails">
+          <ScalarProperty Name="PartTestDetailsID" ColumnName="PartTestDetailsID" />
+          <ScalarProperty Name="PartId" ColumnName="PartId" />
+          <ScalarProperty Name="PartTestId" ColumnName="PartTestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrintingInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.PrintingInfo)">
+        <MappingFragment StoreEntitySet="PrintingInfo">
+          <ScalarProperty Name="PrintingInfoID" ColumnName="PrintingInfoID" />
+          <ScalarProperty Name="BuildStatus" ColumnName="BuildStatus" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="PrintingDate" ColumnName="PrintingDate" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="TypeOfmachine" ColumnName="TypeOfmachine" />
+          <ScalarProperty Name="PowderWeightStart" ColumnName="PowderWeightStart" />
+          <ScalarProperty Name="PowderweightEnd" ColumnName="PowderweightEnd" />
+          <ScalarProperty Name="WeightPowderWaste" ColumnName="WeightPowderWaste" />
+          <ScalarProperty Name="PowerUsed" ColumnName="PowerUsed" />
+          <ScalarProperty Name="PlatformMaterial" ColumnName="PlatformMaterial" />
+          <ScalarProperty Name="PlatformWeight" ColumnName="PlatformWeight" />
+          <ScalarProperty Name="PrintedTime" ColumnName="PrintedTime" />
+          <ScalarProperty Name="PowderCondition" ColumnName="PowderCondition" />
+          <ScalarProperty Name="NumberLayers" ColumnName="NumberLayers" />
+          <ScalarProperty Name="DPCFactor" ColumnName="DPCFactor" />
+          <ScalarProperty Name="MinExposureTime" ColumnName="MinExposureTime" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SLM">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.SLM)">
+        <MappingFragment StoreEntitySet="SLM">
+          <ScalarProperty Name="SLMID" ColumnName="SLMID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StressRelieveingTest">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.StressRelieveingTest)">
+        <MappingFragment StoreEntitySet="StressRelieveingTest">
+          <ScalarProperty Name="StressRelieveingTestID" ColumnName="StressRelieveingTestID" />
+          <ScalarProperty Name="ShieldingGas" ColumnName="ShieldingGas" />
+          <ScalarProperty Name="PartTestId" ColumnName="PartTestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.sysdiagrams)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.Users)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VariableParameters">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.VariableParameters)">
+        <MappingFragment StoreEntitySet="VariableParameters">
+          <ScalarProperty Name="ParamID" ColumnName="ParamID" />
+          <ScalarProperty Name="MaterialType" ColumnName="MaterialType" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ZHeight" ColumnName="ZHeight" />
+          <ScalarProperty Name="NumberOfLayers" ColumnName="NumberOfLayers" />
+          <ScalarProperty Name="UnitOfLength" ColumnName="UnitOfLength" />
+          <ScalarProperty Name="InfillPercentage" ColumnName="InfillPercentage" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstimatedValues">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.EstimatedValues)">
+        <MappingFragment StoreEntitySet="EstimatedValues">
+          <ScalarProperty Name="ValueID" ColumnName="ValueID" />
+          <ScalarProperty Name="TotalPowderUsed" ColumnName="TotalPowderUsed" />
+          <ScalarProperty Name="TotalPrintingTime" ColumnName="TotalPrintingTime" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="BuildId" ColumnName="BuildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConstantParameters">
+      <EntityTypeMapping TypeName="IsTypeOf(SEPDBModel.ConstantParameters)">
+        <MappingFragment StoreEntitySet="ConstantParameters">
+          <ScalarProperty Name="ConstID" ColumnName="ConstID" />
+          <ScalarProperty Name="PrinterCost" ColumnName="PrinterCost" />
+          <ScalarProperty Name="MaterialCost" ColumnName="MaterialCost" />
+          <ScalarProperty Name="LabourCost" ColumnName="LabourCost" />
+          <ScalarProperty Name="PreProcessingTime" ColumnName="PreProcessingTime" />
+          <ScalarProperty Name="SetupTime" ColumnName="SetupTime" />
+          <ScalarProperty Name="PowderHandlingTime" ColumnName="PowderHandlingTime" />
+          <ScalarProperty Name="JobStartTime" ColumnName="JobStartTime" />
+          <ScalarProperty Name="BuildRemovalTime" ColumnName="BuildRemovalTime" />
+          <ScalarProperty Name="PartRemovalTime" ColumnName="PartRemovalTime" />
+          <ScalarProperty Name="PostProcessingTime" ColumnName="PostProcessingTime" />
+          <ScalarProperty Name="MachineCleaningTime" ColumnName="MachineCleaningTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="SEPDBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

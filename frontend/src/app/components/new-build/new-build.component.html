@@ -1,0 +1,182 @@
+<app-toolbar></app-toolbar>
+<mat-horizontal-stepper [linear]="true">
+
+  <!-- FIRST STEP -->
+  <mat-step label="Upload files" [stepControl]="formGroupUpload">
+    <form [formGroup]="formGroupUpload">
+      <div fxLayout="column" [fxFlex]="100" fxLayoutWrap fxLayoutAlign="center center" ng2FileDrop [ngClass]="{'nv-file-over': hasDropZoneOver}"
+        (fileOver)="fileOverDropZone($event)" (onFileDrop)="uploadFile()" [uploader]="uploader" class="drop-zone grey-border">
+
+        <div>Drag all build related files</div>
+        <div>or</div>
+        <button mat-raised-button (click)="fileToUpload.click()" disabled="false">
+          Choose files...
+        </button>
+      </div>
+    </form>
+
+    <div class="files">
+      <div class="file" *ngFor="let item of uploadedFiles; let i = index">
+        {{item._file.name}}
+        <button mat-icon-button (click)="removeUploadedItem(i)">
+          <mat-icon aria-label="Delete file button">
+            delete
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <button mat-button matStepperNext (click)="structureFiles()">Next</button>
+    </div>
+  </mat-step>
+  <!-- END OF FIRST STEP -->
+
+
+  <!-- SECOND STEP -->
+  <mat-step label="Organize files" [stepControl]="formGroupOrganize">
+    <form [formGroup]="formGroupOrganize">
+
+      <div fxLayout="row" fxLayoutAlign="space-between start">
+        <div class="grey-border" [fxFlex]="30">
+          <div class="file-header">
+            <h3>Files</h3>
+          </div>
+          <mat-chip-list>
+            <div class="file-area" [dragula]='"bag"'>
+              <!--[dragulaModel]='unmappedFiles'-->
+              <mat-chip *ngFor="let fileName of unmappedFiles">
+                {{fileName}}
+              </mat-chip>
+            </div>
+          </mat-chip-list>
+
+          <!--<mat-chip-list>-->
+
+          <!--</mat-chip-list>-->
+        </div>
+
+        <div id="file-cards" class="file-area header" [fxFlex]="60">
+          <mat-card>
+            <h3>Part-related files</h3>
+            <mat-card *ngFor="let part of build.Part">
+              <!--<mat-card-header>-->
+              <h4>{{utils.removeSuffix(part.StlFileName)}}</h4>
+              <!--</mat-card-header>-->
+              <mat-card-content>
+                <mat-chip-list>
+                  <div class="card-file-area grey-border" [dragula]='"bag"'>
+                    <!--[dragulaModel]='build.Part'-->
+                    <mat-chip *ngIf="part.StlFileName != null">
+                      {{part.StlFileName}}
+                    </mat-chip>
+                    <mat-chip *ngIf="part.PrtFileName != null">
+                      {{part.PrtFileName}}
+                    </mat-chip>
+                  </div>
+                </mat-chip-list>
+                <mat-form-field class="magics-ids">
+                  <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let magicsID of part.magicsIDs" [selectable]="selectable" [removable]="removable"
+                      (remove)="removeMagicsID(part, magicsID)">
+                      {{magicsID}}
+                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Enter ID(s) from MAGICS screenshot" [matChipInputFor]="chipList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add(part, $event)" />
+                  </mat-chip-list>
+                </mat-form-field>
+              </mat-card-content>
+            </mat-card>
+          </mat-card>
+
+          <mat-card id="build-header">
+            <h3>Build-related files</h3>
+            <mat-card *ngIf="build.Magic.length > 0">
+              <!--<mat-card-header>-->
+              <h4>{{utils.removeSuffix(build.Magic[0].FileName)}}</h4>
+              <!--</mat-card-header>-->
+              <mat-card-content>
+                <div class="card-file-area grey-border">
+                  <mat-chip>
+                    {{build.Magic[0].FileName}}
+                  </mat-chip>
+                  <mat-chip *ngIf="build.SLM != null">
+                    {{build.SLM}}
+                  </mat-chip>
+                  <mat-chip>
+                    {{build.Magic[0].MagicScreenshot}}
+                  </mat-chip>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </mat-card>
+
+        </div>
+      </div>
+    </form>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <!-- END OF SECOND STEP -->
+  <mat-step label="Set Permissions">
+    <div class="permissions" fxLayout="row" fxLayoutAlign="space-around center">
+      <div [fxFlex]="40" class="grey-border">
+        <div fxLayout="row" fxFill class="file-header">
+          <div [fxFlex]="80" fxLayoutAlign="start center">
+            <h3>Full Access</h3>
+          </div>
+          <div [fxFlex]="20" fxLayoutAlign="end center">
+            <span matTooltip="Add user">
+              <button mat-icon-button (click)="addUserToPermissionList(build.fullAccessUsers, 'fullAccessUsers')">
+                <mat-icon aria-label="Add read-only access user">add</mat-icon>
+              </button>
+            </span>
+          </div>
+        </div>
+        <mat-chip-list>
+          <div class="file-area" [dragula]='"bagAccess"' [dragulaModel]='build.fullAccessUsers'>
+            <mat-chip [removable]="removable" (remove)="removeUserPermission(build.fullAccessUsers, faUser)" *ngFor="let faUser of build.fullAccessUsers">
+              {{faUser.first_name}} {{faUser.last_name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+          </div>
+        </mat-chip-list>
+      </div>
+      <div [fxFlex]="40" class="grey-border">
+        <div fxLayout="row" fxFill class="file-header">
+          <div [fxFlex]="80" fxLayoutAlign="start center">
+            <h3>Read-only Access</h3>
+          </div>
+          <div [fxFlex]="20" fxLayoutAlign="end center">
+            <span matTooltip="Add user">
+              <button mat-icon-button (click)="addUserToPermissionList(build.readAccessUsers, 'readAccessUsers')">
+                <mat-icon aria-label="Add read-only access user">add</mat-icon>
+              </button>
+            </span>
+          </div>
+        </div>
+        <mat-chip-list>
+          <div class="file-area" [dragula]='"bagAccess"' [dragulaModel]='build.readAccessUsers'>
+            <mat-chip [removable]="removable" (remove)="removeUserPermission(build.readAccessUsers, raUser)" *ngFor="let raUser of build.readAccessUsers">
+              {{raUser.first_name}} {{raUser.last_name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+          </div>
+        </mat-chip-list>
+      </div>
+    </div>
+
+
+    <button mat-fab [disabled]="build.fullAccessUsers.length == 0" (click)="createBuild()">
+      <mat-icon>check</mat-icon>
+    </button>
+  </mat-step>
+</mat-horizontal-stepper>
+
+
+<!--Not available yet, still in the plugins development branch -->
+<input #fileToUpload ng2FileSelect [uploader]="uploader" (onFileSelected)="uploadFile()" type="file" multiple style="display:none;">

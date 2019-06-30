@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="android.app.printerapp"
+    android:versionCode="0"
+    android:versionName="1.0">
+
+    <uses-sdk tools:overrideLibrary="android.support.v4" />
+
+    <!-- uses-sdk tools:overrideLibrary="android.support.v4"/ -->
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="barcode" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="600"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".util.ui.MyApplication"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppBaseTheme.Green"
+        android:vmSafeMode="true">
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="locale"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".loginScreen.loginScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".homeScreen.homeScreenActivity" />
+        <activity android:name=".activities.buildMainActivity" />
+        <activity
+            android:name=".activities.STLViewerActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".postPrinting.StressRelieving.stressRelievingTestActivity" />
+        <activity android:name=".postPrinting.postPrintingTestActivity" />
+        <activity android:name=".magicsScreenshot.magicsScreenshotActivity" />
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <activity android:name=".postPrinting.General.generalTestActivity" />
+        <activity android:name=".postPrinting.AgingTreatment.agingTreatmentTestActivity" />
+        <activity android:name=".postPrinting.Hardening.hardeningTestActivity" />
+        <activity android:name=".postPrinting.SolutionTreatment.solutionTreatmentTestActivity" />
+        <activity android:name=".postPrinting.Tampering.tamperingTestActivity"></activity>
+    </application>
+
+</manifest>

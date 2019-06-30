@@ -1,0 +1,1664 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BuildDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/build-details/build-details.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../injectables/BuildService.html" target="_self" >BuildService</a></code>
+                            <code><a href="../injectables/PrintingDataService.html" target="_self" >PrintingDataService</a></code>
+                            <code><a href="https://angular.io/api/common/DatePipe" target="_blank" >DatePipe</a></code>
+                            <code><a href="../injectables/FileService.html" target="_self" >FileService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-build-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>build-details.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./build-details.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#build">build</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#imgString">imgString</a>
+                            </li>
+                            <li>
+                                <a href="#printingData">printingData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteBuild">deleteBuild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#downloadFile">downloadFile</a>
+                            </li>
+                            <li>
+                                <a href="#downloadFiles">downloadFiles</a>
+                            </li>
+                            <li>
+                                <a href="#encode">encode</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getFromS3">getFromS3</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getImageFromS3">getImageFromS3</a>
+                            </li>
+                            <li>
+                                <a href="#markAsDone">markAsDone</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#replicate">replicate</a>
+                            </li>
+                            <li>
+                                <a href="#showBuildId">showBuildId</a>
+                            </li>
+                            <li>
+                                <a href="#showMaterialId">showMaterialId</a>
+                            </li>
+                            <li>
+                                <a href="#showPartIds">showPartIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showQRCode">showQRCode</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(buildService: <a href="../injectables/BuildService.html">BuildService</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, iconRegistry: MatIconRegistry, domSanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, dialog: MatDialog, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, printingDataService: <a href="../injectables/PrintingDataService.html">PrintingDataService</a>, datePipe: <a href="https://angular.io/api/common/DatePipe" target="_blank">DatePipe</a>, fileService: <a href="../injectables/FileService.html">FileService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/build-details/build-details.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>buildService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/BuildService.html" target="_self" >BuildService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>iconRegistry</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatIconRegistry</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>domSanitizer</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>printingDataService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PrintingDataService.html" target="_self" >PrintingDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datePipe</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/DatePipe" target="_blank" >DatePipe</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fileService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/FileService.html" target="_self" >FileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteBuild"></a>
+                        <span class="name">
+                            <b>
+                            deleteBuild
+                            </b>
+                            <a href="#deleteBuild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>deleteBuild()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/app/components/build-details/build-details.component.ts:180</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="downloadFile"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            downloadFile
+                            </b>
+                            <a href="#downloadFile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>downloadFile(fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/app/components/build-details/build-details.component.ts:147</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fileName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="downloadFiles"></a>
+                        <span class="name">
+                            <b>
+                            downloadFiles
+                            </b>
+                            <a href="#downloadFiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>downloadFiles()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/components/build-details/build-details.component.ts:115</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="encode"></a>
+                        <span class="name">
+                            <b>
+                            encode
+                            </b>
+                            <a href="#encode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>encode(data: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/components/build-details/build-details.component.ts:96</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Thanks to someone:
+<a href="https://stackoverflow.com/a/33050601/3565973">https://stackoverflow.com/a/33050601/3565973</a>
+<a href="https://stackoverflow.com/a/5366839/3565973">https://stackoverflow.com/a/5366839/3565973</a></p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getFromS3"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getFromS3
+                            </b>
+                            <a href="#getFromS3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getFromS3(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/build-details/build-details.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getImageFromS3"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getImageFromS3
+                            </b>
+                            <a href="#getImageFromS3"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getImageFromS3(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/build-details/build-details.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>key</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="markAsDone"></a>
+                        <span class="name">
+                            <b>
+                            markAsDone
+                            </b>
+                            <a href="#markAsDone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>markAsDone()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/components/build-details/build-details.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/build-details/build-details.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="replicate"></a>
+                        <span class="name">
+                            <b>
+                            replicate
+                            </b>
+                            <a href="#replicate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>replicate()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/components/build-details/build-details.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showBuildId"></a>
+                        <span class="name">
+                            <b>
+                            showBuildId
+                            </b>
+                            <a href="#showBuildId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showBuildId()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/app/components/build-details/build-details.component.ts:161</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMaterialId"></a>
+                        <span class="name">
+                            <b>
+                            showMaterialId
+                            </b>
+                            <a href="#showMaterialId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showMaterialId()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/app/components/build-details/build-details.component.ts:175</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showPartIds"></a>
+                        <span class="name">
+                            <b>
+                            showPartIds
+                            </b>
+                            <a href="#showPartIds"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showPartIds()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/app/components/build-details/build-details.component.ts:165</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showQRCode"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            showQRCode
+                            </b>
+                            <a href="#showQRCode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>showQRCode(qrcode: string[], type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, magicIDs: string[])</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/app/components/build-details/build-details.component.ts:187</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>qrcode</td>
+                                                        <td>
+                                                                    <code>string[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>magicIDs</td>
+                                                        <td>
+                                                                    <code>string[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="build"></a>
+                        <span class="name">
+                            <b>
+                            build
+                            </b>
+                            <a href="#build"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>build:     <code><a href="../classes/Build.html" target="_self" >Build</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Build.html" target="_self" >Build</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/build-details/build-details.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog
+                            </b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dialog:     <code>MatDialog</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/build-details/build-details.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="imgString"></a>
+                        <span class="name">
+                            <b>
+                            imgString
+                            </b>
+                            <a href="#imgString"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>imgString:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/build-details/build-details.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="printingData"></a>
+                        <span class="name">
+                            <b>
+                            printingData
+                            </b>
+                            <a href="#printingData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>printingData:     <code><a href="../classes/PrintingData.html" target="_self" >PrintingData</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/PrintingData.html" target="_self" >PrintingData</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/build-details/build-details.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit, ViewEncapsulation} from &#x27;@angular/core&#x27;;
+import {BuildService} from &quot;../../services/build/build.service&quot;;
+import {ActivatedRoute, Params, Router} from &quot;@angular/router&quot;;
+import {Build} from &quot;../../model/build&quot;;
+import {DomSanitizer} from &quot;@angular/platform-browser&quot;;
+import {MatDialog, MatIconRegistry} from &quot;@angular/material&quot;;
+import {QrDialogComponent} from &quot;../dialogs/qr-dialog/qr-dialog.component&quot;;
+import {MarkDoneDialogComponent} from &quot;../dialogs/delete-dialog/mark-done-dialog.component&quot;;
+import {DeleteDialogComponent} from &quot;../dialogs/mark-done-dialog/delete-dialog.component&quot;;
+import {PrintingData} from &quot;../../model/printing-data&quot;;
+import {PrintingDataService} from &quot;../../services/printing-data/printing-data.service&quot;;
+import {DatePipe} from &quot;@angular/common&quot;;
+import {FileService} from &quot;../../services/file/file.service&quot;;
+import * as AWS from &quot;aws-sdk&quot;;
+import {S3Constants} from &quot;../../model/S3&quot;;
+import {Utils} from &quot;../../model/utils&quot;;
+import * as FileSaver from &#x27;file-saver&#x27;;
+
+
+@Component({
+  selector: &#x27;app-build-details&#x27;,
+  templateUrl: &#x27;./build-details.component.html&#x27;,
+  styleUrls: [&#x27;./build-details.component.scss&#x27;],
+  providers: [BuildService, PrintingDataService, DatePipe, FileService]
+})
+export class BuildDetailsComponent implements OnInit {
+
+  build: Build;
+  printingData: PrintingData;
+  imgString: string;
+
+  constructor(private buildService: BuildService,
+              private activatedRoute: ActivatedRoute,
+              private iconRegistry: MatIconRegistry,
+              private domSanitizer: DomSanitizer,
+              public dialog: MatDialog,
+              private router: Router,
+              private printingDataService: PrintingDataService,
+              private datePipe: DatePipe,
+              private fileService: FileService) {
+    iconRegistry.addSvgIcon(&#x27;qrcode&#x27;,
+      domSanitizer.bypassSecurityTrustResourceUrl(&#x27;assets/qrcode.svg&#x27;));
+  }
+
+  ngOnInit() {
+    this.activatedRoute.paramMap.subscribe((params: Params) &#x3D;&gt; {
+      let buildId &#x3D; params.get(&quot;qrcode&quot;);
+      this.buildService.getBuild(buildId).subscribe(build &#x3D;&gt; {
+        this.build &#x3D; build;
+        this.getImageFromS3(&quot;magicscreenshot/&quot; + this.build.Magic[0].MagicScreenshot);
+        this.printingDataService.getPrintingData(this.build.QR_code).subscribe(printingData &#x3D;&gt; {
+          this.printingData &#x3D; printingData;
+        }, error &#x3D;&gt; {
+          this.printingData &#x3D; new PrintingData();
+          console.log(error);
+        });
+      }, error &#x3D;&gt; {
+        console.log(error);
+      });
+    });
+  }
+
+  private getImageFromS3(key: string) {
+    this.getFromS3(key).then(data &#x3D;&gt; {
+      console.log(&quot;data:&quot;, data);
+      let base64Image &#x3D; &quot;data:&quot; + data.ContentType + &quot;;base64,&quot; + this.encode(data.Body);
+      this.imgString &#x3D; base64Image;
+    }).catch(err &#x3D;&gt; {
+      console.log(err);
+    });
+  }
+
+  private getFromS3(key: string): Promise&lt;any&gt; {
+    let s3 &#x3D; new AWS.S3({apiVersion: S3Constants.apiVersion, region: S3Constants.region});
+    s3.config.credentials &#x3D; {
+      accessKeyId: S3Constants.accessKeyId,
+      secretAccessKey: S3Constants.secretKey
+    };
+    s3.config.setPromisesDependency(Promise);
+
+    let params &#x3D; {
+      Bucket: S3Constants.bucket,
+      Key: key
+    };
+
+    return s3.getObject(params).promise();
+  }
+
+  /**
+   * Thanks to someone:
+   * https://stackoverflow.com/a/33050601/3565973
+   * https://stackoverflow.com/a/5366839/3565973
+   * @param data
+   * @returns {string}
+   */
+  encode(data) {
+    let str &#x3D; data.reduce(function (a, b) {
+      return a + String.fromCharCode(b);
+    }, &#x27;&#x27;);
+    return btoa(str).replace(/.{76}(?&#x3D;.)/g, &#x27;$&amp;\n&#x27;);
+  }
+
+
+  markAsDone() {
+    let dialogRef &#x3D; this.dialog.open(MarkDoneDialogComponent, {
+      width: &#x27;500px&#x27;,
+      data: {obj: this.build}
+    });
+  }
+
+  replicate() {
+    // TODO: implement
+  }
+
+  downloadFiles() {
+    let fileName;
+    (this.build.SLM as any).forEach(slmObj &#x3D;&gt; {
+      if (slmObj[&quot;FileName&quot;] !&#x3D; null) {
+        fileName &#x3D; slmObj[&quot;FileName&quot;];
+        this.downloadFile(fileName);
+      }
+    });
+
+    this.build.Magic.forEach(magicsObj &#x3D;&gt; {
+      if (magicsObj.FileName !&#x3D; null) {
+        fileName &#x3D; magicsObj.FileName;
+        this.downloadFile(fileName);
+      }
+      if (magicsObj.MagicScreenshot !&#x3D; null) {
+        fileName &#x3D; magicsObj.MagicScreenshot;
+        this.downloadFile(fileName);
+      }
+    });
+
+    this.build.Part.forEach(partObj &#x3D;&gt; {
+      if (partObj.StlFileName !&#x3D; null) {
+        fileName &#x3D; partObj.StlFileName;
+        this.downloadFile(fileName);
+      }
+      if (partObj.PrtFileName !&#x3D; null) {
+        fileName &#x3D; partObj.PrtFileName;
+        this.downloadFile(fileName);
+      }
+    });
+  }
+
+  private downloadFile(fileName: string) {
+    let key &#x3D; Utils.getPathFromSuffix(Utils.getSuffix(fileName)) + &quot;/&quot; + fileName;
+    console.log(key);
+    this.getFromS3(key).then(data &#x3D;&gt; {
+      console.log(&quot;DATA!!!&quot;, data);
+      let blob &#x3D; new Blob([data.Body], {type: data.ContentType});
+
+      FileSaver.saveAs(blob, fileName);
+
+    }).catch(err &#x3D;&gt; {
+      console.log(err);
+    });
+  }
+
+  showBuildId() {
+    this.showQRCode([this.build.QR_code], &quot;Build ID&quot;, null);
+  }
+
+  showPartIds() {
+    let partQRCodes &#x3D; [];
+    let magicIDs: string[] &#x3D; [];
+    this.build.Part.forEach(part &#x3D;&gt; {
+      partQRCodes.push(part.QR_code);
+      magicIDs.push(part.MagicID);
+    });
+    this.showQRCode(partQRCodes, &quot;Part ID&quot;, magicIDs);
+  }
+
+  showMaterialId() {
+    this.showQRCode([&quot;M&quot; + this.build.MaterialId], &quot;Material ID&quot;, null);
+  }
+
+
+  deleteBuild() {
+    let dialogRef &#x3D; this.dialog.open(DeleteDialogComponent, {
+      width: &#x27;500px&#x27;,
+      data: {obj: this.build}
+    });
+  }
+
+  private showQRCode(qrcode: string[], type: string, magicIDs: string[]) {
+    let dialogRef &#x3D; this.dialog.open(QrDialogComponent, {
+      width: &#x27;500px&#x27;,
+      data: {qrcodes: qrcode, type: type, magicIDs: magicIDs}
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-toolbar&gt;&lt;/app-toolbar&gt;
+
+&lt;div class&#x3D;&quot;container&quot; *ngIf&#x3D;&quot;build !&#x3D; null&quot; fxLayout&#x3D;&quot;row&quot; fxFill&gt;
+  &lt;div class&#x3D;&quot;sidebar&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;start stretch&quot; fxFlex&#x3D;&quot;none&quot;&gt;
+    &lt;div class&#x3D;&quot;mark-done&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;markAsDone()&quot; [disabled]&#x3D;&quot;build.Status &#x3D;&#x3D; 2&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon&gt;done&lt;/mat-icon&gt;
+          &lt;span *ngIf&#x3D;&quot;build.Status &#x3D;&#x3D; 0 || build.Status &#x3D;&#x3D; 1&quot;&gt;MARK AS DONE&lt;/span&gt;
+          &lt;!--&lt;span *ngIf&#x3D;&quot;build.Status &#x3D;&#x3D; 1&quot;&gt;&lt;/span&gt;--&gt;
+          &lt;span *ngIf&#x3D;&quot;build.Status &#x3D;&#x3D; 2&quot;&gt;ALREADY PRINTED&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;replicate&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;replicate()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon&gt;replay&lt;/mat-icon&gt;
+          REPLICATE
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;download&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;downloadFiles()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon&gt;file_download&lt;/mat-icon&gt;
+          DOWNLOAD FILES
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;build-code&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;showBuildId()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon svgIcon&#x3D;&quot;qrcode&quot;&gt;&lt;/mat-icon&gt;
+          BUILD ID
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;part-codes&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;showPartIds()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon svgIcon&#x3D;&quot;qrcode&quot;&gt;&lt;/mat-icon&gt;
+          PART IDS
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;material-code&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;showMaterialId()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon svgIcon&#x3D;&quot;qrcode&quot;&gt;&lt;/mat-icon&gt;
+          MATERIAL ID
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;delete-build&quot;&gt;
+      &lt;button mat-raised-button (click)&#x3D;&quot;deleteBuild()&quot;&gt;
+        &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;mat-icon&gt;delete&lt;/mat-icon&gt;
+          DELETE BUILD
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;main-content&quot; fxFlex&gt;
+    &lt;div class&#x3D;&quot;magics-img&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;center center&quot; mat-elevation-z12&gt;
+      &lt;img *ngIf&#x3D;&quot;imgString&quot; [src]&#x3D;&quot;domSanitizer.bypassSecurityTrustUrl(imgString)&quot; alt&#x3D;&quot;Screenshot of the magics file&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;ball-row build-id-row&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;center start&quot;&gt;
+      &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+        &lt;div class&#x3D;&quot;ball buildId&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{build.QR_code}}&lt;/div&gt;
+        &lt;span&gt;Build ID&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;printingData &#x3D;&#x3D; null&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+      &lt;mat-spinner&gt;&lt;/mat-spinner&gt;
+    &lt;/div&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;printingData !&#x3D; null&quot;&gt;
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.printingDate | date:&#x27;yyyy-MM-dd&#x27;}}&lt;/div&gt;
+          &lt;span&gt;Printing date&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.startTime | date:&#x27;HH:mm&#x27;}}&lt;/div&gt;
+          &lt;span&gt;Start time&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.endTime}}&lt;/div&gt;
+          &lt;!--| date:&#x27;HH:mm&#x27;}}&lt;/div&gt;--&gt;
+          &lt;span&gt;End time&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.operator}}&lt;/div&gt;
+          &lt;span&gt;Operator&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.typeOfmachine}}&lt;/div&gt;
+          &lt;span&gt;Type of machine&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.powderWeightStart}}&lt;/div&gt;
+          &lt;span&gt;Powder weight start&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.powderweightEnd}}&lt;/div&gt;
+          &lt;span&gt;Powder weight end&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.weightPowderWaste}}&lt;/div&gt;
+          &lt;span&gt;Weight powder waste&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.powerUsed}}&lt;/div&gt;
+          &lt;span&gt;Power used&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.platformMaterial}}&lt;/div&gt;
+          &lt;span&gt;Platform material&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.platformWeight}}&lt;/div&gt;
+          &lt;span&gt;Platform weight&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.printedTime}}&lt;/div&gt;
+            &lt;!--| date:&#x27;HH:mm&#x27;}}&lt;/div&gt;--&gt;
+          &lt;span&gt;Printed time&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.powderCondition}}&lt;/div&gt;
+          &lt;span&gt;Powder condition&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.numberLayers}}&lt;/div&gt;
+          &lt;span&gt;Number of layers&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.dpcFactor}}&lt;/div&gt;
+          &lt;span&gt;DPC factor&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;ball-row details-row-1&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-evenly start&quot;&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot;  fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball date&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.minExposureTime}}&lt;/div&gt;
+          &lt;!--| date:&#x27;HH:mm&#x27;}}&lt;/div&gt;--&gt;
+          &lt;span&gt;Min exposure time&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container comments&quot; fxLayout&#x3D;&quot;column&quot;  fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;div class&#x3D;&quot;ball start-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;{{printingData.comments}}&lt;/div&gt;
+          &lt;p&gt;Comments&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;ball-container&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+          &lt;!--&lt;div class&#x3D;&quot;ball end-time&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;&lt;/div&gt;--&gt;
+          &lt;!--&lt;span&gt;&lt;/span&gt;--&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-toolbar></app-toolbar><div class="container" *ngIf="build != null" fxLayout="row" fxFill>  <div class="sidebar" fxLayout="column" fxLayoutAlign="start stretch" fxFlex="none">    <div class="mark-done">      <button mat-raised-button (click)="markAsDone()" [disabled]="build.Status == 2">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon>done</mat-icon>          <span *ngIf="build.Status == 0 || build.Status == 1">MARK AS DONE</span>          <!--<span *ngIf="build.Status == 1"></span>-->          <span *ngIf="build.Status == 2">ALREADY PRINTED</span>        </div>      </button>    </div>    <div class="replicate">      <button mat-raised-button (click)="replicate()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon>replay</mat-icon>          REPLICATE        </div>      </button>    </div>    <div class="download">      <button mat-raised-button (click)="downloadFiles()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon>file_download</mat-icon>          DOWNLOAD FILES        </div>      </button>    </div>    <div class="build-code">      <button mat-raised-button (click)="showBuildId()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon svgIcon="qrcode"></mat-icon>          BUILD ID        </div>      </button>    </div>    <div class="part-codes">      <button mat-raised-button (click)="showPartIds()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon svgIcon="qrcode"></mat-icon>          PART IDS        </div>      </button>    </div>    <div class="material-code">      <button mat-raised-button (click)="showMaterialId()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon svgIcon="qrcode"></mat-icon>          MATERIAL ID        </div>      </button>    </div>    <div class="delete-build">      <button mat-raised-button (click)="deleteBuild()">        <div fxLayout="column" fxLayoutAlign="center center">          <mat-icon>delete</mat-icon>          DELETE BUILD        </div>      </button>    </div>  </div>  <div class="main-content" fxFlex>    <div class="magics-img" fxLayout="row" fxLayoutAlign="center center" mat-elevation-z12>      <img *ngIf="imgString" [src]="domSanitizer.bypassSecurityTrustUrl(imgString)" alt="Screenshot of the magics file"/>    </div>    <div class="ball-row build-id-row" fxLayout="row" fxLayoutAlign="center start">      <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">        <div class="ball buildId" fxLayout="column" fxLayoutAlign="center center">{{build.QR_code}}</div>        <span>Build ID</span>      </div>    </div>    <div *ngIf="printingData == null" fxLayout="row" fxLayoutAlign="center center">      <mat-spinner></mat-spinner>    </div>    <ng-container *ngIf="printingData != null">      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.printingDate | date:\'yyyy-MM-dd\'}}</div>          <span>Printing date</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.startTime | date:\'HH:mm\'}}</div>          <span>Start time</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.endTime}}</div>          <!--| date:\'HH:mm\'}}</div>-->          <span>End time</span>        </div>      </div>      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.operator}}</div>          <span>Operator</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.typeOfmachine}}</div>          <span>Type of machine</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderWeightStart}}</div>          <span>Powder weight start</span>        </div>      </div>      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderweightEnd}}</div>          <span>Powder weight end</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.weightPowderWaste}}</div>          <span>Weight powder waste</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.powerUsed}}</div>          <span>Power used</span>        </div>      </div>      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.platformMaterial}}</div>          <span>Platform material</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.platformWeight}}</div>          <span>Platform weight</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.printedTime}}</div>            <!--| date:\'HH:mm\'}}</div>-->          <span>Printed time</span>        </div>      </div>      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.powderCondition}}</div>          <span>Powder condition</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.numberLayers}}</div>          <span>Number of layers</span>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <div class="ball end-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.dpcFactor}}</div>          <span>DPC factor</span>        </div>      </div>      <div class="ball-row details-row-1" fxLayout="row" fxLayoutAlign="space-evenly start">        <div class="ball-container" fxLayout="column"  fxLayoutAlign="center center">          <div class="ball date" fxLayout="column" fxLayoutAlign="center center">{{printingData.minExposureTime}}</div>          <!--| date:\'HH:mm\'}}</div>-->          <span>Min exposure time</span>        </div>        <div class="ball-container comments" fxLayout="column"  fxLayoutAlign="center center">          <div class="ball start-time" fxLayout="column" fxLayoutAlign="center center">{{printingData.comments}}</div>          <p>Comments</p>        </div>        <div class="ball-container" fxLayout="column" fxLayoutAlign="center center">          <!--<div class="ball end-time" fxLayout="column" fxLayoutAlign="center center"></div>-->          <!--<span></span>-->        </div>      </div>    </ng-container>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailsComponent', 'selector': 'app-build-details'},{'name': 'BuildsComponent', 'selector': 'app-builds'},{'name': 'DeleteDialogComponent', 'selector': 'app-delete-dialog'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MarkDoneDialogComponent', 'selector': 'app-mark-done-dialog'},{'name': 'NewBuildComponent', 'selector': 'app-new-build'},{'name': 'NewMaterialComponent', 'selector': 'app-new-material'},{'name': 'QrDialogComponent', 'selector': 'app-qr-dialog'},{'name': 'ToolbarComponent', 'selector': 'app-toolbar'},{'name': 'UserTableComponent', 'selector': 'app-user-table'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BuildDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BuildDetailsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

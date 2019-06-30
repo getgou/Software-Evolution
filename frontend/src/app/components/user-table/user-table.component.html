@@ -1,0 +1,24 @@
+<div class="container mat-elevation-z8">
+  <div class="header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Select users to add</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-checkbox [(ngModel)]="element.checked">
+          {{element.first_name}} {{element.last_name}} ({{element.username}})
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClick(row)"></mat-row>
+  </mat-table>
+</div>
+

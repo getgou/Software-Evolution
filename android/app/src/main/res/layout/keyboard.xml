@@ -1,0 +1,204 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/almost_transparent">
+
+        <!--Top Keyboard Panel-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <!--Build Button-->
+            <Button
+                android:id="@+id/buttonBuild"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/optionsPadButtonHeight"
+                android:layout_weight="2"
+                android:text="Build"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/keyboardTextSize" />
+
+            <!--Part Button-->
+            <Button
+                android:id="@+id/buttonPart"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/optionsPadButtonHeight"
+                android:layout_weight="2"
+                android:text="Part"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/keyboardTextSize"/>
+
+            <!--Material Button-->
+            <Button
+                android:id="@+id/buttonMaterial"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/optionsPadButtonHeight"
+                android:layout_weight="2"
+                android:text="Material"
+                android:fontFamily="sans-serif-light"
+                android:textSize="@dimen/keyboardTextSize"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!--Number Pad-->
+        <LinearLayout
+            android:id="@+id/keyboardRightPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--First Row of Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="1"/>
+
+                <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="2"/>
+
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="3"/>
+
+            </LinearLayout>
+
+            <!--Second Row of Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="4"/>
+
+                <Button
+                    android:id="@+id/button_5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="5"/>
+
+                <Button
+                    android:id="@+id/button_6"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="6"/>
+
+            </LinearLayout>
+
+            <!--Third Row of Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_7"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="7"/>
+
+                <Button
+                    android:id="@+id/button_8"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="8"/>
+
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="9"/>
+
+            </LinearLayout>
+
+            <!--Fourth Row of Button-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Delete"/>
+
+                <Button
+                    android:id="@+id/button_0"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"/>
+
+                <Button
+                    android:id="@+id/button_search"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/numberPadbuttonHeight"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/keyboardTextSize"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:text="Search"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</merge>

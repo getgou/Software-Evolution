@@ -1,0 +1,14 @@
+<h1 mat-dialog-title class="text">Add user</h1>
+<div mat-dialog-content>
+  <span *ngIf="allUsers == null" class="text">Loading users...</span>
+  <ng-container *ngIf="loaded">
+    <!--<span class="text">Select users to add and press DONE</span>-->
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <app-user-table [userInput]="allUsers"></app-user-table>
+    </div>
+  </ng-container>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClickClose()" tabindex="0">CLOSE</button>
+  <button mat-button (click)="onClickDone()" tabindex="1">DONE</button>
+</div>

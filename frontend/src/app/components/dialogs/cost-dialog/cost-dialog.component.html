@@ -1,0 +1,11 @@
+<h1 mat-dialog-title class="text">Estimation Result</h1>
+<hr/>
+<div mat-dialog-content class="choice-dialog">
+  <p class="text">Estimated powder: {{estimatedPowder}} grams</p>
+  <p class="text">Estimated cost: {{estimatedCost}} SEK</p>
+  <p class="text">Estimated time: {{estimatedTime}} hours</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClickClose()" tabindex="0">Close</button>
+  <button mat-button color="primary" (click)="showInputParameters()" tabindex="1">Edit parameters</button>
+</div>

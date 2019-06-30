@@ -1,0 +1,1059 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AddUserDialogComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/new-build/new-build.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-add-user-dialog</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>.dialogs/dialog.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>../dialogs/add-user-dialog.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allUsers">allUsers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialogRef">dialogRef</a>
+                            </li>
+                            <li>
+                                <a href="#loaded">loaded</a>
+                            </li>
+                            <li>
+                                <a href="#userTableComponent">userTableComponent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onClickClose">onClickClose</a>
+                            </li>
+                            <li>
+                                <a href="#onClickDone">onClickDone</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialogRef: <a href="../classes/User.html">MatDialogRef<AddUserDialogComponent></a>, userService: <a href="../injectables/UserService.html">UserService</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="386" class="link-to-prism">src/app/components/new-build/new-build.component.ts:386</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialogRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../classes/User.html" target="_self" >MatDialogRef&lt;AddUserDialogComponent&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClickClose"></a>
+                        <span class="name">
+                            <b>
+                            onClickClose
+                            </b>
+                            <a href="#onClickClose"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onClickClose()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="410" class="link-to-prism">src/app/components/new-build/new-build.component.ts:410</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClickDone"></a>
+                        <span class="name">
+                            <b>
+                            onClickDone
+                            </b>
+                            <a href="#onClickDone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onClickDone()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="414" class="link-to-prism">src/app/components/new-build/new-build.component.ts:414</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allUsers"></a>
+                        <span class="name">
+                            <b>
+                            allUsers
+                            </b>
+                            <a href="#allUsers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>allUsers:     <code><a href="../classes/UserListEntry.html" target="_self" >UserListEntry[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/UserListEntry.html" target="_self" >UserListEntry[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="383" class="link-to-prism">src/app/components/new-build/new-build.component.ts:383</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            data
+                            </b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>data:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>Inject</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="390" class="link-to-prism">src/app/components/new-build/new-build.component.ts:390</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialogRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialogRef
+                            </b>
+                            <a href="#dialogRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>dialogRef:     <code><a href="../classes/User.html" target="_self" >MatDialogRef&lt;AddUserDialogComponent&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/User.html" target="_self" >MatDialogRef&lt;AddUserDialogComponent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="388" class="link-to-prism">src/app/components/new-build/new-build.component.ts:388</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loaded"></a>
+                        <span class="name">
+                            <b>
+                            loaded
+                            </b>
+                            <a href="#loaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>loaded:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="384" class="link-to-prism">src/app/components/new-build/new-build.component.ts:384</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userTableComponent"></a>
+                        <span class="name">
+                            <b>
+                            userTableComponent
+                            </b>
+                            <a href="#userTableComponent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>userTableComponent:     <code><a href="../classes/User.html" target="_self" >UserTableComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/User.html" target="_self" >UserTableComponent</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="386" class="link-to-prism">src/app/components/new-build/new-build.component.ts:386</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, Inject, OnInit, ViewChild} from &#x27;@angular/core&#x27;;
+import {FormBuilder, FormGroup} from &quot;@angular/forms&quot;;
+import {FileItem, FileUploader} from &quot;ng2-file-upload&quot;;
+import {AuthService} from &quot;../../services/auth/auth.service&quot;;
+import {User} from &quot;../../model/user&quot;;
+import {DragulaService} from &quot;ng2-dragula&quot;;
+import {Build} from &quot;../../model/build&quot;;
+import {Utils} from &quot;../../model/utils&quot;;
+import {Magic} from &quot;../../model/magics&quot;;
+import {Part} from &quot;../../model/part&quot;;
+import {API} from &quot;../../model/API&quot;;
+import {BuildService} from &quot;../../services/build/build.service&quot;;
+import {MAT_DIALOG_DATA, MatChipInputEvent, MatDialog, MatDialogRef} from &#x27;@angular/material&#x27;;
+import {Router} from &quot;@angular/router&quot;;
+import {COMMA, ENTER, RIGHT_ARROW, SPACE} from &quot;@angular/cdk/keycodes&quot;;
+import {UserService} from &quot;../../services/user/user.service&quot;;
+import {UserListEntry, UserTableComponent} from &quot;../user-table/user-table.component&quot;;
+import {QrDialogComponent} from &quot;../dialogs/qr-dialog/qr-dialog.component&quot;;
+import * as AWS from &quot;aws-sdk&quot;;
+import {S3Constants} from &quot;../../model/S3&quot;;
+
+
+@Component({
+  selector: &#x27;app-new-build&#x27;,
+  templateUrl: &#x27;./new-build.component.html&#x27;,
+  styleUrls: [&#x27;./new-build.component.scss&#x27;],
+  providers: [AuthService, BuildService]
+})
+export class NewBuildComponent implements OnInit {
+  formGroupUpload: FormGroup;
+  formGroupOrganize: FormGroup;
+  public uploader: FileUploader;
+  public hasDropZoneOver &#x3D; false;
+  private user: User;
+  build: Build;
+  private fileNamesToMap: string[] &#x3D; [];
+  unmappedFiles: string[] &#x3D; [];
+  private utils &#x3D; Utils;
+  uploadedFiles: FileItem[] &#x3D; [];
+  creatingBuild &#x3D; false;
+
+
+  visible &#x3D; true;
+  selectable &#x3D; true;
+  removable &#x3D; true;
+  addOnBlur &#x3D; true;
+
+  // Enter, comma
+  separatorKeysCodes &#x3D; [ENTER, SPACE, RIGHT_ARROW, COMMA];
+
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService,
+              private dragulaService: DragulaService,
+              private buildService: BuildService,
+              public dialog: MatDialog,
+              private router: Router) {
+    this.user &#x3D; authService.getUser();
+    this.build &#x3D; new Build();
+    this.build.fullAccessUsers.push(this.user);
+    console.log(this.build);
+
+    dragulaService.setOptions(&#x27;bag&#x27;, {
+      revertOnSpill: true
+    });
+
+    dragulaService.dropModel.subscribe(value &#x3D;&gt; {
+      console.log(&quot;drop:&quot;, value);
+    });
+
+    dragulaService.removeModel.subscribe(value &#x3D;&gt; {
+      console.log(&quot;remove:&quot;, value);
+    });
+
+    this.formGroupUpload &#x3D; formBuilder.group({
+      // files: [Validators.required]
+    });
+    this.formGroupOrganize &#x3D; formBuilder.group({
+      // field1: [Validators.required]
+    });
+
+    this.uploader &#x3D; new FileUploader({
+      authToken: &quot;bearer &quot; + this.authService.getToken(),
+      disableMultipart: true
+    });
+    // About disableMultipart:
+    // &quot;If &#x27;true&#x27;, disable using a multipart form for file upload and instead
+    // stream the file. Some APIs (e.g. Amazon S3) may expect the file to be
+    // streamed rather than sent via a form. Defaults to false.&quot;
+
+    this.uploader.onBeforeUploadItem &#x3D; (fileItem: FileItem): any &#x3D;&gt; {
+      // logic of connecting url with the file
+      fileItem.url &#x3D; API.Files.getS3Path(fileItem._file.name);
+
+      return {fileItem};
+    };
+
+    this.uploader.onAfterAddingFile &#x3D; (fileItem: FileItem): any &#x3D;&gt; {
+      console.log(fileItem._file);
+      this.uploadFile();
+    };
+  }
+
+  ngOnInit() {
+  }
+
+  createBuild() {
+    if (!this.creatingBuild) {
+      this.creatingBuild &#x3D; true;
+      console.log(JSON.stringify(this.build));
+      this.buildService.createBuild(this.build).subscribe(data &#x3D;&gt; {
+        this.build.QR_code &#x3D; &quot;B&quot; + data;
+        this.showQRCode();
+        // this.buildService.createPrintingInfo(data).subscribe(buildId &#x3D;&gt; {
+        // }, error &#x3D;&gt; {
+        //   alert(&quot;Something went wrong creating the printing info&quot;);
+        //   console.log(error);
+        // });
+      }, error &#x3D;&gt; {
+        alert(&quot;Something went wrong creating the build. Try again later.&quot;);
+        console.log(error);
+        this.creatingBuild &#x3D; false;
+      });
+    }
+  }
+
+  private showQRCode() {
+    let dialogRef &#x3D; this.dialog.open(QrDialogComponent, {
+      width: &#x27;300px&#x27;,
+      data: {qrcodes: [this.build.QR_code], type: &quot;Build ID&quot;}
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      this.router.navigateByUrl(&#x27;&#x27;);
+    });
+  }
+
+  addUserToPermissionList(list: User[], listname: string) {
+    console.log(list);
+    let dialogRef &#x3D; this.dialog.open(AddUserDialogComponent, {
+      minWidth: &#x27;300px&#x27;,
+      data: {permissionsList: list}
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result !&#x3D; null) { // &#x3D; click done, not dismiss
+        let newUserList: User[] &#x3D; [];
+        console.log(&#x27;The dialog was closed&#x27;, result);
+        let filteredResult &#x3D; result.filter(resItem &#x3D;&gt; {
+          return resItem.checked;
+        });
+        console.log(filteredResult);
+        filteredResult.forEach(item &#x3D;&gt; {
+          delete item.checked;
+          console.log(item);
+          newUserList.push(new User(item));
+        });
+        list &#x3D; newUserList;
+        if (listname &#x3D;&#x3D;&#x3D; &quot;fullAccessUsers&quot;) {
+          this.build.fullAccessUsers &#x3D; newUserList;
+        } else if (listname &#x3D;&#x3D;&#x3D; &quot;readAccessUsers&quot;) {
+          this.build.readAccessUsers &#x3D; newUserList;
+        }
+      }
+    });
+
+  }
+
+  public fileOverDropZone(e: any): void {
+    this.hasDropZoneOver &#x3D; e;
+  }
+
+  uploadFile() {
+    let s3 &#x3D; new AWS.S3({apiVersion: S3Constants.apiVersion, region: S3Constants.region});
+    s3.config.credentials &#x3D; {
+      accessKeyId: S3Constants.accessKeyId,
+      secretAccessKey: S3Constants.secretKey
+    };
+    s3.config.setPromisesDependency(Promise);
+
+    console.log(this.uploader.getNotUploadedItems());
+
+    this.uploader.getNotUploadedItems().forEach(queueObj &#x3D;&gt; {
+      console.log(queueObj._file);
+      let fileName &#x3D; queueObj._file.name;
+      let suffix &#x3D; Utils.getSuffix(fileName);
+      console.log(&quot;suffix&quot;, suffix);
+      if (suffix.length &gt; 0 &amp;&amp; Utils.isValidFileFormat(suffix) &amp;&amp;
+        !this.uploadedFiles.some(fileItem &#x3D;&gt; {
+          return fileItem._file.name &#x3D;&#x3D;&#x3D; queueObj._file.name;
+        })) {
+        console.log(&quot;is valid&quot;);
+
+        this.fileNamesToMap.push(fileName);
+        let prefix &#x3D; Utils.getPathFromSuffix(suffix);
+        let params &#x3D; {
+          Bucket: S3Constants.bucket,
+          Key: prefix + &quot;/&quot; + queueObj._file.name,
+          Body: queueObj._file
+        };
+
+        let putObjectPromise &#x3D; s3.putObject(params).promise();
+        putObjectPromise.then(data &#x3D;&gt; {
+          console.log(&quot;DATA#!: &quot;, data);
+        }).catch(err &#x3D;&gt; {
+          console.log(&quot;ERR#!: &quot;, err);
+        });
+
+        let uploaded &#x3D; this.uploader.queue.splice(0, 1);
+        this.uploadedFiles &#x3D; this.uploadedFiles.concat(uploaded);
+      } else {
+        // wrong file ending or wrong format
+        this.filterFaultyItemFromQueue(queueObj._file);
+      }
+    });
+
+    this.structureFiles();
+  }
+
+
+  private mapToBuildModel(fileName: string) {
+    let suffix &#x3D; Utils.getSuffix(fileName);
+    if (suffix &#x3D;&#x3D;&#x3D; &#x27;magics&#x27;) {
+      if (this.build.Magic.length &#x3D;&#x3D;&#x3D; 0) {
+        this.build.Magic.push(new Magic());
+      }
+      this.build.Magic[0].FileName &#x3D; fileName;
+    } else if (suffix &#x3D;&#x3D;&#x3D; &#x27;png&#x27; ||
+      suffix &#x3D;&#x3D;&#x3D; &#x27;jpg&#x27; ||
+      suffix &#x3D;&#x3D;&#x3D; &#x27;jpeg&#x27; ||
+      suffix &#x3D;&#x3D;&#x3D; &#x27;gif&#x27;) {
+      console.log(this.build);
+      if (this.build.Magic.length &#x3D;&#x3D;&#x3D; 0) {
+        this.build.Magic[0] &#x3D; new Magic();
+      }
+      this.build.Magic[0].MagicScreenshot &#x3D; fileName;
+    } else if (suffix &#x3D;&#x3D;&#x3D; &#x27;slm&#x27;) {
+      this.build.SLM &#x3D; fileName;
+    } else if (suffix &#x3D;&#x3D;&#x3D; &#x27;stl&#x27;) {
+      // if (this.build.Part &#x3D;&#x3D; null) {
+      //   this.build.Part &#x3D; [];
+      // }
+
+      // If the file list to map contains a prt-file with the same name, then
+      //     if that prt-file is in a build.part, then
+      //         add the stl it to that part
+      //     else
+      //         create a new part and add the stl there
+      // else
+      //     create a new part and add the stl there
+
+      let possiblePrt &#x3D; this.fileNamesToMap.find(fileNameInList &#x3D;&gt; {
+        return fileNameInList &#x3D;&#x3D;&#x3D; (Utils.removeSuffix(fileName) + &quot;.prt&quot;);
+      });
+
+      if (possiblePrt !&#x3D; null) {
+        let part &#x3D; this.build.Part.find(partOfParts &#x3D;&gt; {
+          console.log(&quot;partOfParts: &quot;, partOfParts);
+          return partOfParts.PrtFileName !&#x3D; null &amp;&amp;
+            Utils.removeSuffix(partOfParts.PrtFileName) &#x3D;&#x3D;&#x3D; Utils.removeSuffix(fileName);
+        });
+        if (part !&#x3D; null) {
+          part.StlFileName &#x3D; fileName;
+        } else {
+          // if there is no part with that name yet
+          part &#x3D; new Part();
+          part.StlFileName &#x3D; fileName;
+          this.build.Part.push(part);
+        }
+      } else {
+        let part &#x3D; new Part();
+        part.StlFileName &#x3D; fileName;
+        this.build.Part.push(part);
+      }
+    } else if (suffix &#x3D;&#x3D;&#x3D; &#x27;prt&#x27;) {
+      // if (this.build.Part &#x3D;&#x3D; null) {
+      //   this.build.Part &#x3D; [];
+      // }
+
+      // If the file list to map contains a stl-file with the same name, then
+      //     if that stl-file is in a build.part, then
+      //         add the prt it to that part
+      //     else
+      //         create a new part and add the prt there
+      // else
+      //     create a new part and add the prt there
+
+      let possibleStl &#x3D; this.fileNamesToMap.find(fileNameInList &#x3D;&gt; {
+        return fileNameInList &#x3D;&#x3D;&#x3D; (Utils.removeSuffix(fileName) + &quot;.stl&quot;);
+      });
+      console.log(&quot;possibleSTL: &quot;, possibleStl);
+      if (possibleStl !&#x3D; null) {
+        let part &#x3D; this.build.Part.find(partOfParts &#x3D;&gt; {
+          console.log(&quot;partOfParts: &quot;, partOfParts);
+          return partOfParts.StlFileName !&#x3D; null &amp;&amp;
+            Utils.removeSuffix(partOfParts.StlFileName) &#x3D;&#x3D;&#x3D; Utils.removeSuffix(fileName);
+        });
+        if (part !&#x3D; null) {
+          part.PrtFileName &#x3D; fileName;
+        } else {
+          // if there is no part with that name yet
+          part &#x3D; new Part();
+          part.PrtFileName &#x3D; fileName;
+          this.build.Part.push(part);
+        }
+      } else {
+        this.unmappedFiles.push(fileName);
+      }
+    }
+  }
+
+  filterFaultyItemFromQueue(item: File) {
+    console.log(&quot;FAIL!&quot;);
+    let foundItem &#x3D; this.uploader.queue.find(queueItem &#x3D;&gt; {
+      return queueItem._file.name &#x3D;&#x3D;&#x3D; item.name;
+    });
+    console.log(&quot;Found item: &quot;, foundItem);
+    this.uploader.queue.splice(this.uploader.queue.indexOf(foundItem), 1);
+  }
+
+  structureFiles() {
+    this.build.clearAllExceptAccess();
+    this.unmappedFiles &#x3D; [];
+
+    console.log(&quot;click!&quot;);
+
+    this.fileNamesToMap.forEach(fileName &#x3D;&gt; {
+      this.mapToBuildModel(fileName);
+    });
+
+    // TODO: sort the Part
+
+    console.log(&quot;************&quot;);
+    console.log(this.build);
+    console.log(&quot;unmappedFiles: &quot;, this.unmappedFiles);
+    console.log(&quot;------------&quot;);
+  }
+
+
+  add(part: Part, event: MatChipInputEvent): void {
+    let input &#x3D; event.input;
+    let value &#x3D; event.value;
+
+    // Add our person
+    if ((value || &#x27;&#x27;).trim()) {
+      part.magicsIDs.push(value.trim());
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value &#x3D; &#x27;&#x27;;
+    }
+  }
+
+  removeMagicsID(part: Part, buildID: string): void {
+    this.removeFromListHelper(part.magicsIDs, buildID);
+  }
+
+  removeUserPermission(userList: User[], faUser: User) {
+    this.removeFromListHelper(userList, faUser);
+  }
+
+  private removeFromListHelper(list: any, object: any) {
+    let index &#x3D; list.indexOf(object);
+
+    if (index &gt;&#x3D; 0) {
+      list.splice(index, 1);
+    }
+  }
+
+  removeUploadedItem(index: number) {
+    this.uploadedFiles.splice(index, 1);
+  }
+}
+
+
+@Component({
+  selector: &#x27;app-add-user-dialog&#x27;,
+  styleUrls: [&#x27;../dialogs/dialog.component.scss&#x27;],
+  templateUrl: &#x27;../dialogs/add-user-dialog.component.html&#x27;,
+  providers: [UserService]
+})
+export class AddUserDialogComponent {
+  allUsers: UserListEntry[] &#x3D; [];
+  loaded &#x3D; false;
+
+  @ViewChild(UserTableComponent) userTableComponent: UserTableComponent;
+
+  constructor(public dialogRef: MatDialogRef&lt;AddUserDialogComponent&gt;,
+              private userService: UserService,
+              @Inject(MAT_DIALOG_DATA) public data: any) {
+    this.userService.getAllUsers().subscribe(usersData &#x3D;&gt; {
+      usersData.forEach(user &#x3D;&gt; {
+        // this.allUsers.push()
+        let isChecked &#x3D; data.permissionsList.some((alreadyCheckedUser: User) &#x3D;&gt; {
+          return alreadyCheckedUser.user_id &#x3D;&#x3D;&#x3D; user.user_id;
+        });
+        let userListEntry &#x3D; new UserListEntry(user);
+        userListEntry.checked &#x3D; isChecked;
+        this.allUsers.push(userListEntry);
+      });
+      console.log(this.allUsers);
+      this.loaded &#x3D; true;
+      // this.allUsers &#x3D; usersData;
+    }, error &#x3D;&gt; {
+      console.error(error);
+      alert(&quot;Could not get users from server&quot;);
+    });
+  }
+
+  onClickClose(): void {
+    this.dialogRef.close();
+  }
+
+  onClickDone(): void {
+    this.dialogRef.close(this.userTableComponent.userList);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1 mat-dialog-title class&#x3D;&quot;text&quot;&gt;Add user&lt;/h1&gt;
+&lt;div mat-dialog-content&gt;
+  &lt;span *ngIf&#x3D;&quot;allUsers &#x3D;&#x3D; null&quot; class&#x3D;&quot;text&quot;&gt;Loading users...&lt;/span&gt;
+  &lt;ng-container *ngIf&#x3D;&quot;loaded&quot;&gt;
+    &lt;!--&lt;span class&#x3D;&quot;text&quot;&gt;Select users to add and press DONE&lt;/span&gt;--&gt;
+    &lt;div fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+      &lt;app-user-table [userInput]&#x3D;&quot;allUsers&quot;&gt;&lt;/app-user-table&gt;
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/div&gt;
+&lt;div mat-dialog-actions&gt;
+  &lt;button mat-button (click)&#x3D;&quot;onClickClose()&quot; tabindex&#x3D;&quot;0&quot;&gt;CLOSE&lt;/button&gt;
+  &lt;button mat-button (click)&#x3D;&quot;onClickDone()&quot; tabindex&#x3D;&quot;1&quot;&gt;DONE&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1 mat-dialog-title class="text">Add user</h1><div mat-dialog-content>  <span *ngIf="allUsers == null" class="text">Loading users...</span>  <ng-container *ngIf="loaded">    <!--<span class="text">Select users to add and press DONE</span>-->    <div fxLayout="column" fxLayoutAlign="center center">      <app-user-table [userInput]="allUsers"></app-user-table>    </div>  </ng-container></div><div mat-dialog-actions>  <button mat-button (click)="onClickClose()" tabindex="0">CLOSE</button>  <button mat-button (click)="onClickDone()" tabindex="1">DONE</button></div></div>'
+    var COMPONENTS = [{'name': 'AddUserDialogComponent', 'selector': 'app-add-user-dialog'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BuildDetailsComponent', 'selector': 'app-build-details'},{'name': 'BuildsComponent', 'selector': 'app-builds'},{'name': 'DeleteDialogComponent', 'selector': 'app-delete-dialog'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'MarkDoneDialogComponent', 'selector': 'app-mark-done-dialog'},{'name': 'NewBuildComponent', 'selector': 'app-new-build'},{'name': 'NewMaterialComponent', 'selector': 'app-new-material'},{'name': 'QrDialogComponent', 'selector': 'app-qr-dialog'},{'name': 'ToolbarComponent', 'selector': 'app-toolbar'},{'name': 'UserTableComponent', 'selector': 'app-user-table'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddUserDialogComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddUserDialogComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

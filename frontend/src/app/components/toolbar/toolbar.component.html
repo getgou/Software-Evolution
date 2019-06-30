@@ -1,0 +1,17 @@
+<div class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+  <div>
+    <a routerLink="">
+      <img class="logo" src="assets/both.jpg">
+    </a>
+  </div>
+  <div>
+    <span class="text">Welcome, {{user.first_name}}</span>
+    <span matTooltip="Sign out">
+      <button mat-icon-button>
+        <mat-icon aria-label="Sign out" (click)="logout()">
+          exit_to_app
+        </mat-icon>
+      </button>
+    </span>
+  </div>
+</div>

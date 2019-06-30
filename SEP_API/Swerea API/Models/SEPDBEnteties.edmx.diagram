@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3dee087b3aa34d50ba39cd399c4607e4" Name="Diagram1">
+        <EntityTypeShape EntityType="SEPDBModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.AspNetRoles" Width="1.5" PointX="7.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.AspNetUserClaims" Width="1.5" PointX="12.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.AspNetUserLogins" Width="1.5" PointX="12.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.AspNetUsers" Width="1.5" PointX="10" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.Build" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.GeneralTest" Width="1.5" PointX="9.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.GomBuild" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.GomPart" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.Magic" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.Material" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.MaterialPdf" Width="1.5" PointX="10" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.Part" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.PartTest" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.PartTestDetails" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.PrintingInfo" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.SLM" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.StressRelieveingTest" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.sysdiagrams" Width="1.5" PointX="11.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEPDBModel.Users" Width="1.5" PointX="5.375" PointY="18.25" IsExpanded="true" />
+        <AssociationConnector Association="SEPDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_Gom_Build_Build" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_Magic_Magic" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_Part_Build" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_PrintingInfo_Build" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_SLM_SLM" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_Gom_part_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_Material_Pdf_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_part_test_details_Part" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_part_test_details_part_test_details" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.FK_StressRelieveingTest_PartTest" ManuallyRouted="false" />
+        <AssociationConnector Association="SEPDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SEPDBModel.VariableParameters" Width="1.75" PointX="4.875" PointY="14.875" />
+        <EntityTypeShape EntityType="SEPDBModel.EstimatedValues" Width="1.5" PointX="5" PointY="12.5" />
+        <EntityTypeShape EntityType="SEPDBModel.ConstantParameters" Width="1.75" PointX="7.375" PointY="14.125" />
+        <AssociationConnector Association="SEPDBModel.BuildEstimatedValues" />
+        <AssociationConnector Association="SEPDBModel.BuildVariableParameters" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

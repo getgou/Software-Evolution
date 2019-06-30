@@ -1,0 +1,15 @@
+﻿#######################################################
+#########################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+
+/SwereaAPI/obj
+
+/Swerea API/obj
+/Swerea API/bin
+/.vs
+*.dll
+*.pdb
+*.suo

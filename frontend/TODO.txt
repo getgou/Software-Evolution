@@ -1,0 +1,4 @@
+1. Authenticate to database (Connect to the database)
+2. See build in progress
+3. Search for build
+4. Set authorization/permission levels for a build

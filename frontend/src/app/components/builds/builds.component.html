@@ -1,0 +1,32 @@
+<ng-container *ngIf="loaded == false">
+  Loading content...
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<ng-container *ngIf="loaded == null">
+  Failed to load content. Try to sign out and sign in again.
+</ng-container>
+
+<ng-container *ngIf="loaded == true">
+  <div class="container mat-elevation-z8">
+    <div class="header">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+
+    <mat-table #table [dataSource]="dataSource">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="qrcode">
+        <mat-header-cell *matHeaderCellDef>Click a build to view details about it</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{element.qrcode}}
+          </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClick(row)"></mat-row>
+    </mat-table>
+  </div>
+</ng-container>

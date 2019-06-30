@@ -1,0 +1,33 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textViewInnerData"
+        android:layout_width="@dimen/gridColumnWidth"
+        android:layout_height="@dimen/gridColumnWidth"
+        android:text="Data Goes Here"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@drawable/circular_shape_green"
+        android:fontFamily="sans-serif-light"
+        android:lines="2">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textViewOuterData"
+        android:layout_width="@dimen/gridColumnWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:lines="2"
+        android:gravity="center"
+        android:text="Key"
+        android:fontFamily="sans-serif-light">
+    </TextView>
+
+</LinearLayout>

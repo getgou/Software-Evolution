@@ -1,0 +1,68 @@
+@import "../../../theme";
+
+.drop-zone {
+  padding: 100px 0;
+}
+
+.drop-zone div {
+  padding: 0.5em;
+}
+
+
+.nv-file-over {
+  background-color: lightyellow;
+}
+
+
+mat-progress-bar {
+  margin: 16px 0;
+}
+
+
+.grey-border {
+  border: 2px dashed gray;
+}
+
+.file-area {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.card-file-area {
+  width: 100%;
+  height: 100%;
+  min-height: 20px;
+}
+
+.file-header {
+  border-bottom: 2px dashed gray;
+}
+
+h3 {
+  margin-left: 8px;
+}
+
+#build-header {
+  margin-top: 32px;
+}
+
+mat-card {
+  margin-bottom: 1em;
+}
+
+mat-chip {
+  padding: 0.3em;
+  margin: 0.4em;
+  //border: 1px double $swerea-accent(400);
+}
+
+
+.magics-ids {
+  width: 100%;
+  margin-top: 1em;
+}
+
+@mixin angular-app-theme($swerea-app-theme) {
+}
+

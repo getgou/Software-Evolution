@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+            <EditText
+                android:id="@+id/editTextIDtoScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/body_text_3"
+                android:hint="@string/scanHint"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-light"
+                android:inputType="text"
+                android:textSize="25sp"/>
+
+            <android.app.printerapp.util.ui.customKeyboard.scannerKeyboard
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"/>
+
+
+</RelativeLayout>

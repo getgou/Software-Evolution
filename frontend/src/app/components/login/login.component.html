@@ -1,0 +1,30 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div>
+      <!--
+      <img class="logo" src="../../../assets/both.jpg">
+      -->
+      <img class="logo" src="assets/both.jpg">
+      <!--<img class="logo" src="../../../assets/VinnovaLogo.jpg">-->
+    </div>
+    <form [formGroup]="loginForm">
+
+      <label>Sign in</label>
+      <div class fxLayout="column" fxLayoutAlign="center center">
+        <mat-form-field>
+          <input matInput placeholder="Username" formControlName="username">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+
+        <!--<mat-error *ngIf="loginError">Hej</mat-error>-->
+
+        <button mat-raised-button color="primary" (click)="login()">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

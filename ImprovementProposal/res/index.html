@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery hummingbird-treeview Demo</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="hummingbird-treeview.css" rel="stylesheet" type="text/css">
+<style>
+body { background-color:#fafafa;}
+.container { min-height:100vh;}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+    //border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.h-scroll {
+    background-color: #fcfdfd;
+    height: 260px;
+    overflow-y: scroll;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div id="treeview_container" class="hummingbird-treeview well h-scroll-large">
+          <!-- <div id="treeview_container" class="hummingbird-treeview"> -->
+          <ul id="treeview" class="hummingbird-base">
+          </ul>
+      </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="hummingbird-treeview.js"></script>
+<script>
+$("#treeview").hummingbird();
+$( "#checkAll" ).click(function() {
+  $("#treeview").hummingbird("checkAll");
+});
+$( "#uncheckAll" ).click(function() {
+  $("#treeview").hummingbird("uncheckAll");
+});
+$( "#collapseAll" ).click(function() {
+  $("#treeview").hummingbird("collapseAll");
+});
+$( "#checkNode" ).click(function() {
+  $("#treeview").hummingbird("checkNode",{attr:"id",name: "node-0-2-2",expandParents:false});
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
